@@ -96,24 +96,7 @@
           /*  +++++++++++++++ BEGIN IMAGE PROCESSING +++++++++++++++ */
           /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
-			//takes the image data and gets the pixels
-		  ctx2.putImageData(imgPixels, 0, 0, 0, 0, imgPixels.width, imgPixels.height);
-			//context for the image data
-      
-        } // end of img.onload
-        
-        img.src = reader.result;
-      } //  end of reader.onload
-      
-        reader.readAsDataURL(file);
-    } // end of the if statement checking that file is an image
-        else
-    {
-      // this is what happens if the orignial file selected is not an image file
-      messageDisplayArea.innerHTML = "File not supported!"
-    } // end of the else statement if file in NOT an image
-  }); // end of the fileInput.addEventListener function
- } // end of the window.onload function
+	}	
 </script>
 <style> /* set styles of the content*/
       p {text-align:center;} /* set all paragraph to center aligned*/
@@ -133,6 +116,15 @@
 	<div role="main" class="ui-content">
 			<p>This website will help to determine which insect has bitten you. Hit the button below to begin.</p>
 			<a href="#page1" class= "ui-btn">Begin by upload a picture of your bite!</a>
+			<div data-role="content">	
+		      		<h2>Push button to take/select an image.</h2>
+		      		<div>
+				Press orange button to create or choose image file:
+				<input type="file" id="fileInput" STYLE="background-color: #FF6600;">
+		      		</div>
+		      	<div id="messageDisplayArea"></div>
+	
+		
 				<!-- on click, this will launch to the first page of the survey.-->
 			
 		</div><!-- /content -->
