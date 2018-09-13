@@ -102,9 +102,22 @@
  </head>
 
  <body>
-  <div data-role="page">
-    <div data-role="header">
-    <h1>Bug Bite ID</h1></div><!-- /header -->
-    <div data-role="content">	
-
+ <!-- Intro page -->
+	<div data-role="page" id="intro">
+		<!-- the layout of the website will be like a page. This page is labeled as intro so that the other pages can be differentiated from this one.-->
+		<div data-role="header">
+			<h1>Bug Bite ID</h1>
+				<!-- Name of the header at the top of the page -->
+		</div><!-- /header -->
+	<div role="main" class="ui-content">
+			<p>This website will help to determine which insect has bitten you. Hit the button below to begin.</p>
+			<a href="#page1" class= "ui-btn">Begin!</a>
+				<!-- on click, this will launch to the first page of the survey.-->
+			
+		</div><!-- /content -->
+		<div data-role="footer" data-position="fixed">
+			<h4>DIY Diagnostics</h4>
+		</div><!-- /footer -->
+	</div><!-- /page 1 -->
 </body>
+
