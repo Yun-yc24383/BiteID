@@ -136,7 +136,15 @@
 			<input type="file" id="fileInput" STYLE="background-color: #FF6600;">
 		      	</div>
 		      <div id="messageDisplayArea"></div>
-	
+		<canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
+		<script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
+		var canvas = document.getElementById('myCanvas');// get canvas by id "myCanvas"
+		var context = canvas.getContext("2d");// set canvas element to 2D.
+		context.font = '20pt Calibri'; // set displayed text in canvas context to 20pt Calibri font
+		context.fillStyle = "black";// set displayed text in canvas context to black
+		context.fillText("Original image will go here", 10, 20); // state displayed text content and position. 
+		</script>
+		
 		
 			<!-- on click, this will launch to the first page of the survey.-->
 			
