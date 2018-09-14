@@ -139,7 +139,7 @@
 		
 		<div id="messageDisplayArea"></div>
 		
-		<canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;" paddle: 0; margin: auto;></canvas>
+		<canvas id="myCanvas" width=600 height=500 paddle: 0 margin: auto style="border:1px solid #d3d3d3;" ></canvas>
 		<script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
 		var canvas = document.getElementById('myCanvas');// get canvas by id "myCanvas"
 		var context = canvas.getContext("2d");// set canvas element to 2D.
@@ -164,7 +164,9 @@
 				<!-- Name of the header at the top of the page -->
 		</div><!-- /header -->
 		<div data-role="content">
-			<!-- Question 1 goes here--> 
+			<p><!-- Question 1 goes here-->  </p>  
+			<a href="#Q2" data-role="button">Next</a> <!-- Add a button that links to question 2 -->
+			
 		</div>
 		</div><!-- /content -->
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
@@ -178,7 +180,8 @@
 				<!-- Name of the header at the top of the page -->
 		</div><!-- /header -->
 		<div data-role="content">
-			<!-- Question 2 goes here--> 
+			<p><!-- Question 3 goes here-->  </p>  
+			<a href="#Q3" data-role="button">Next</a> <!-- Add a button that links to question 3 -->
 		</div>
 		</div><!-- /content -->
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
@@ -186,13 +189,14 @@
 		</div><!-- /footer -->
 	</div><!--/question 2--> 
 <!-- Question 3 of survey-->
-	<div data-role="page" id="Q1">
+	<div data-role="page" id="Q3">
 		<div data-role="header">
 			<h1>Bug Bite ID</h1>
 				<!-- Name of the header at the top of the page -->
 		</div><!-- /header -->
 		<div data-role="content">
-			<!-- Question 3 goes here--> 
+			<p><!-- Question 4 goes here-->  </p>  
+			<a href="#Q4" data-role="button">Next</a> <!-- Add a button that links to question 4 -->
 		</div>
 		</div><!-- /content -->
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
@@ -200,13 +204,14 @@
 		</div><!-- /footer -->
 	</div><!--/question 3--> 
 <!-- Question 4 of survey-->
-	<div data-role="page" id="Q1">
+	<div data-role="page" id="Q4">
 		<div data-role="header">
 			<h1>Bug Bite ID</h1>
 				<!-- Name of the header at the top of the page -->
 		</div><!-- /header -->
 		<div data-role="content">
-			<!-- Question 4 goes here--> 
+			<p><!-- Question 1 goes here-->  </p>  
+			<a href="#Q5" data-role="button">Next</a> <!-- Add a button that links to question 5 -->
 		</div>
 		</div><!-- /content -->
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
@@ -214,18 +219,33 @@
 		</div><!-- /footer -->
 	</div><!--/question 4--> 
 <!-- Question 5 of survey-->
-	<div data-role="page" id="Q1">
+	<div data-role="page" id="Q5">
 		<div data-role="header">
 			<h1>Bug Bite ID</h1>
 				<!-- Name of the header at the top of the page -->
 		</div><!-- /header -->
 		<div data-role="content">
-			<!-- Question 5 goes here--> 
+			<p><!-- Question 1 goes here-->  </p>  
+			<a href="#results" data-role="button">Next</a> <!-- Add a button that links to result-->
 		</div>
 		</div><!-- /content -->
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
 	</div><!--/question 5--> 
+<!--Results-->
+	<div data-role="page" id="results">
+		<div data-role="header">
+			<h1>Bug Bite ID</h1>
+				<!-- Name of the header at the top of the page -->
+		</div><!-- /header -->
+		<div data-role="content">
+			<p><!-- results goes here-->  </p>  
+		</div>
+		</div><!-- /content -->
+			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
+			<h4>DIY Diagnostics</h4>
+		</div><!-- /footer -->
+	</div><!--/Results--> 
 </body>
 </html>
