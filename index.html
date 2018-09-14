@@ -112,9 +112,10 @@
  } // end of the window.onload function	
 </script>
 <style> /* set styles of the content*/
-      p {text-align:center;} /* set all paragraph to center aligned*/
-      h1 {text-align:center;}  /* set all header 1 to center aligned*/
-      h2 {text-align:center;}  /* set all header 2 to center aligned*/
+	p {text-align:center;} /* set all paragraph to center aligned*/
+	h1 {text-align:center;}  /* set all header 1 to center aligned*/
+	h2 {text-align:center;}  /* set all header 2 to center aligned*/
+	h4 {text-align:center;}  /* set all header 4 to center aligned*/
 </style>  
  </head>
 
@@ -144,8 +145,8 @@
 		context.fillStyle = "black";// set displayed text in canvas context to black
 		context.fillText("Picture of your bite will be displayed here.", 10, 20); // state displayed text content and position. 
 		</script>
-		
-		
+		<p> Click  START  to start the survey after your image is uploaded. </p>  <!-- content shown on title page, break is added by using <br> in each line-->
+		<a href="#Q1" data-role="button">START</a>	<!-- Add a button that links to question 1 -->
 		<!-- on click, this will launch to the first page of the survey.-->
 			
 		</div><!-- /content -->
@@ -153,7 +154,7 @@
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
 	</div><!-- /intro page -->
-<!-- Question 1 of questionnaire-->
+<!-- Question 1 of survey-->
 	<div data-role="page" id="Q1">
 		<div data-role="header">
 			<h1>Bug Bite ID</h1>
