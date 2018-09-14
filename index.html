@@ -130,11 +130,13 @@
 		<div data-role="content">
 			<p>This website will help to determine which insect has bitten you.</p
 			<p>Start by uploading a picture of your bite!</p>
-			<a href="#page1" class= "ui-btn"></a>
 			<div>
-			Press orange button to create or choose image file:
+			Press "Choose File" to create or choose image file:
 			<input type="file" id="fileInput" STYLE="background-color: #FF6600;">
-		</div>
+			</div>
+			<p> Click  START  to start the survey after your image is uploaded. </p>  <!-- content shown on title page, break is added by using <br> in each line-->
+			<a href="#Q1" data-role="button">START</a>	<!-- Add a button that links to question 1 -->
+			<!-- on click, this will launch to the first page of the survey.-->
 		<div id="messageDisplayArea"></div>
 		
 		<canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
@@ -145,9 +147,7 @@
 		context.fillStyle = "black";// set displayed text in canvas context to black
 		context.fillText("Picture of your bite will be displayed here.", 10, 20); // state displayed text content and position. 
 		</script>
-		<p> Click  START  to start the survey after your image is uploaded. </p>  <!-- content shown on title page, break is added by using <br> in each line-->
-		<a href="#Q1" data-role="button">START</a>	<!-- Add a button that links to question 1 -->
-		<!-- on click, this will launch to the first page of the survey.-->
+		
 			
 		</div><!-- /content -->
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
