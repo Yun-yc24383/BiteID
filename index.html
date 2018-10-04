@@ -172,30 +172,7 @@
 	}); */
 </script>
 <script>
-var select_all = document.getElementById("select_all"); //select all checkbox
-var checkboxes = document.getElementsByClassName("checkbox"); //checkbox items
 
-//select all checkboxes
-select_all.addEventListener("change", function(e){
-    for (i = 0; i < checkboxes.length; i++) { 
-        checkboxes[i].checked = select_all.checked;
-    }
-});
-
-
-for (var i = 0; i < checkboxes.length; i++) {
-    checkboxes[i].addEventListener('change', function(e){ //".checkbox" change 
-        //uncheck "select all", if one of the listed checkbox item is unchecked
-        if(this.checked == false){
-            select_all.checked = false;
-        }
-        //check "select all" if all checkbox items are checked
-        if(document.querySelectorAll('.checkbox:checked').length == checkboxes.length){
-            select_all.checked = true;
-        }
-    });
-}
-	 </script>
 <style> /* set styles of the content*/
 	p {text-align:center;} /* set all paragraph to center aligned*/
 	h1 {text-align:center;}  /* set all header 1 to center aligned*/
@@ -278,8 +255,8 @@ for (var i = 0; i < checkboxes.length; i++) {
 			<button >Pain</button>
 			<button >Hive</button>
 			<button >Burning Sensation</button>-->
-			<checkbox class="checkbox " value="Itch">Itch</checkbox>
-			<button class="checkbox" value="Pain">Pain</button>
+			<button class="button button1 " value="Itch">Itch</button>
+			<button class="button button1" value="Pain">Pain</button>
 			<button class="button button1" value="Hive">Hive</button>
 			<button class="button button1" value="Burining">Burining Sensation</button>
 			<button class="button button1" value="Itch">Itch</button>
