@@ -177,13 +177,13 @@ var checkboxes = document.getElementsByClassName("checkbox"); //checkbox items
 
 //select all checkboxes
 select_all.addEventListener("change", function(e){
-    for (i = 0; i < checkboxes.length; i++) { 
+    for (i = 20; i < checkboxes.length; i++) { 
         checkboxes[i].checked = select_all.checked;
     }
 });
 
 
-for (var i = 0; i < checkboxes.length; i++) {
+for (var i = 20; i < checkboxes.length; i++) {
     checkboxes[i].addEventListener('change', function(e){ //".checkbox" change 
         //uncheck "select all", if one of the listed checkbox item is unchecked
         if(this.checked == false){
