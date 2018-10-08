@@ -162,6 +162,18 @@
 	function blackSpiderAdd (){
 		blackSpider = blackSpider + 1;
 	}
+	function allAdd (){
+		brownSpider = brownSpider + 1;
+		blackSpider = blackSpider + 1;
+		fireAnts = fireAnts + 1;
+		deerFlies = deerFlies + 1;
+		ticks = ticks + 1;
+		bees = bees + 1;
+		chiggers = chiggers + 1;
+		mosquitoes = mosquitoes + 1;
+		bedBugs = bedBugs + 1;
+		fleas = fleas + 1;
+	}
 		// these functions will add a count to the total every time a corresponding button is pressed during the survey.
 	
 	 function showResults() {
@@ -239,13 +251,13 @@
 			<p>Where is the bite located on your body? <br> Please select the location of your bite.</p>
 			<!-- checkboxes-->
 			<ul><!--unorderd bulleted list-->
-			    	<label><input class="checkbox" type="checkbox" name="check[]"> Legs/ankles </label>
-			    	<label><input class="checkbox" type="checkbox" name="check[]"> Arms </label>
-			    	<label><input class="checkbox" type="checkbox" name="check[]"> Folds of skin (e.g. inner elbow, behind your knee)</label>
-			    	<label><input class="checkbox" type="checkbox" name="check[]"> Face </label>
-			    	<label><input class="checkbox" type="checkbox" name="check[]"> Back </label>
-		            	<label><input class="checkbox" type="checkbox" name="check[]"> Torso </label>
-				<label><input class="checkbox" type="checkbox" name="check[]"> Neck </label>
+			    	<label><input class="checkbox" onclick="fleasAdd();chiggersAdd()" type="checkbox" name="check[]"> Legs/ankles </label>
+			    	<label><input class="checkbox" onclick="allAdd();" type="checkbox" name="check[]"> Arms </label>
+			    	<label><input class="checkbox" onclick="ticksAdd();fleasAdd();chiggersAdd();" type="checkbox" name="check[]"> Folds of skin (e.g. inner elbow, behind your knee)</label>
+			    	<label><input class="checkbox" onclick="allAdd();" type="checkbox" name="check[]"> Face </label>
+			    	<label><input class="checkbox" onclick="allAdd();" type="checkbox" name="check[]"> Back </label>
+		            	<label><input class="checkbox" onclick="allAdd();" type="checkbox" name="check[]"> Torso </label>
+				<label><input class="checkbox" onclick="allAdd();" type="checkbox" name="check[]"> Neck </label>
 			</ul><!-- end of list-->
 			<a href="#Q2" data-role="button" style="float:right">Next</a> <!-- link to next page-->
 		</div><!-- /content -->
@@ -264,9 +276,9 @@
 			<p>What does your bite(s) look like? <br> Please select the appearances that apply to the bite(s) you have.</p>
 			<!-- checkboxes-->
 			<ul><!--unorderd bulleted list-->
-			    	<label><input class="checkbox" onclick="mosquitoesAdd();"type="checkbox" name="check[]"> Bump </label>
+			    	<label><input class="checkbox" onclick="mosquitoesAdd();" type="checkbox" name="check[]"> Bump </label>
 			    	<label><input class="checkbox" onclick="bedBugsAdd();" type="checkbox" name="check[]"> Bite mark </label>
-			    	<label><input class="checkbox" onclick="bedBugsAdd();fleasAdd();chiggersAdd();"type="checkbox" name="check[]"> Clustered in group</label>
+			    	<label><input class="checkbox" onclick="bedBugsAdd();fleasAdd();chiggersAdd();" type="checkbox" name="check[]"> Clustered in group</label>
 			    	<label><input class="checkbox" onclick="bedBugsAdd();fleasAdd();" type="checkbox" name="check[]"> Form a line </label>
 			    	<label><input class="checkbox" onclick="beesAdd();" type="checkbox" name="check[]"> Stinger presented </label>
 		            	<label><input class="checkbox" onclick="fireAntsAdd();" type="checkbox" name="check[]"> Blister </label>
