@@ -287,10 +287,20 @@
 			<h1>Bug Bite ID</h1>
 			<!-- Name of the header at the top of the page -->
 		</div><!-- /header -->
-		<div role="main" class="ui-content">
-			<p><!-- Question 4 goes here--> </p>  
-			<a href="#Q4" data-role="button">Yes</a>
-			<a href="#Q4" data-role="button">No</a><!-- Add a button that links to question 4 -->
+		<div data-role="content">
+			<p>What does your bite(s) look like? Please select the appearances that apply to the bite(s) you have.</p>
+			<!-- checkboxes-->
+			<ul><!--unorderd bulleted list-->
+			    	<label><input class="checkbox" type="checkbox" name="check[]"> Bump </label>
+			    	<label><input class="checkbox" type="checkbox" name="check[]"> Bite mark </label>
+			    	<label><input class="checkbox" type="checkbox" name="check[]"> Clustered in group</label>
+			    	<label><input class="checkbox" type="checkbox" name="check[]"> Form a line </label>
+			    	<label><input class="checkbox" type="checkbox" name="check[]"> Stinger presented </label>
+		            	<label><input class="checkbox" type="checkbox" name="check[]"> Blister </label>
+				<label><input class="checkbox" type="checkbox" name="check[]"> 2 puncture marks </label>
+				<label><input class="checkbox" type="checkbox" name="check[]"> Blue/purple-ish color around the bite </label>
+			</ul><!-- end of list-->
+			<a href="#Q3" data-role="button" data-class ="button">Next</a> <!-- link to next page-->
 		</div><!-- /content -->
 		<div data-role="footer" data-position="fixed">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
