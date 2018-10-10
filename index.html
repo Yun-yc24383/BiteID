@@ -178,7 +178,7 @@
 	// these functions above will add a count to the total every time a corresponding button is pressed during the survey.
 	
 	// create dictionary with bite and its count
-	Map<String, String> map = new HashMap<String, String>();
+	/*Map<String, String> map = new HashMap<String, String>();
 	map.put(str(brownSpider),"Brown Recluse Spider");
 	map.put(str(blackSpider), "Black Widow Spider");
 	map.put(str(fireAnts), "Fire ants");
@@ -188,15 +188,37 @@
 	map.put(str(mosquitoes), "Mosquito");
 	map.put(str(bedBugs), "Bedbug");
 	map.put(str(fleas), "Flea");
-	map.put(str(ticks), "Tick");	
+	map.put(str(ticks), "Tick");*/	
 	
 	 // function to display result on the last page
 	 function showResults() {
-		 var biteid_Count = Math.max(brownSpider,deerFlies,ticks,bees,chiggers,mosquitoes,bedBugs,fleas)
-		 document.getElementById("resultText").innerHTML = System.out.println(" The result of your bite is " + map.get(str(ticks))) + "Your max result count is " + biteid_Count;
+		 var bite_Count = Math.max(brownSpider,deerFlies,ticks,bees,chiggers,mosquitoes,bedBugs,fleas)
+		 //document.getElementById("resultText").innerHTML = System.out.println(" The result of your bite is " + map.get(str(ticks))) + "Your max result count is " + biteid_Count;
+		 if (bite_Count = brownSpider){
+			 biteid = "Brown Recluse Spider"; 
+		 } else if (bite_Count = blackSpider){
+			 biteid = "Black Widow Spider"; 
+		 } else if (bite_Count = fireAnts){
+			 biteid = "Fire Ants"; 
+		 } else if (bite_Count = deerFlies){
+			 biteid = "Deer Flies"; 
+		 } else if (bite_Count = ticks){
+			 biteid = "Ticks";
+		 } else if (bite_Count = bees){
+			 biteid = "Bees";
+		 } else if (bite_Count = chiggers){
+			 biteid = "Chiggers";
+		 } else if (bite_Count = mosquitoes){
+		 	 biteid = "Mosquitoes";
+		 } else if (bite_Count = bedBugs){
+			 biteid = "Bedbugs";
+		 } else if (bite_Count = fleas){
+		 	 biteid = "Fleas";
+		 }
 		 //calculations for the results will go here when we figure out the image analysis part
-		 
+		 document.getElementById("resultText").innerHTML = " The result of your bite is " + biteid + " with a count score of " + bite_Count ; 
 	 }
+		 
 
 	 
 	 
