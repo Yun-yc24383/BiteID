@@ -178,22 +178,22 @@
 	// these functions above will add a count to the total every time a corresponding button is pressed during the survey.
 	
 	// create dictionary with bite and its count
-	Map<Integer, String> map = new HashMap<Integer, String>();
-	map.put(brownSpider,"Brown Recluse Spider");
-	map.put(blackSpider, "Black Widow Spider");
-	map.put(fireAnts, "Fire ants");
-	map.put(deerFlies, "Deer fly");
-	map.put(bees,"Bee");
-	map.put(chiggers, "Chigger");
-	map.put(mosquitoes, "Mosquito");
-	map.put(bedBugs, "Bedbug");
-	map.put(fleas, "Flea");
-	map.put(ticks, "Tick");	
+	Map<String, String> map = new HashMap<String, String>();
+	map.put(str(brownSpider),"Brown Recluse Spider");
+	map.put(str(blackSpider), "Black Widow Spider");
+	map.put(str(fireAnts), "Fire ants");
+	map.put(str(deerFlies), "Deer fly");
+	map.put(str(bees),"Bee");
+	map.put(str(chiggers), "Chigger");
+	map.put(str(mosquitoes), "Mosquito");
+	map.put(str(bedBugs), "Bedbug");
+	map.put(str(fleas), "Flea");
+	map.put(str(ticks), "Tick");	
 	
 	 // function to display result on the last page
 	 function showResults() {
 		 var biteid_Count = Math.max(brownSpider,deerFlies,ticks,bees,chiggers,mosquitoes,bedBugs,fleas)
-		 document.getElementById("resultText").innerHTML = System.out.println(" The result of your bite is " + map.get(biteid_Count)) + "Your max result count is " + biteid_Count;
+		 document.getElementById("resultText").innerHTML = System.out.println(" The result of your bite is " + map.get(str(biteid_Count))) + "Your max result count is " + biteid_Count;
 		 //calculations for the results will go here when we figure out the image analysis part
 		 
 	 }
