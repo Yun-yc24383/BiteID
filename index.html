@@ -194,6 +194,7 @@
 	 function showResults() {
 		 var bite_Count = Math.max(brownSpider,deerFlies,ticks,bees,chiggers,mosquitoes,bedBugs,fleas)
 		 //document.getElementById("resultText").innerHTML = System.out.println(" The result of your bite is " + map.get(str(ticks))) + "Your max result count is " + biteid_Count;
+		 // if bite count equals to the bite count of a specific bite then that will be the output result
 		 if (bite_Count == brownSpider){
 			 biteid = "Brown Recluse Spider"; 
 		 } else if (bite_Count == blackSpider){
@@ -218,12 +219,6 @@
 		 //calculations for the results will go here when we figure out the image analysis part
 		 document.getElementById("resultText").innerHTML = " The result of your bite is " + biteid + " with a count score of " + bite_Count ; 
 	 }
-		 
-
-	 
-	 
-	 
-
 </script>
 
 
