@@ -117,8 +117,9 @@
     } // end of the else statement if file in NOT an image
   }); // end of the fileInput.addEventListener function
  } // end of the window.onload function	
-	 
-	 
+	 </script>
+
+<script>
 	var brownSpider = 0;
 	var deerFlies = 0;
 	var ticks = 0;
@@ -174,13 +175,25 @@
 		bedBugs = bedBugs + 1;
 		fleas = fleas + 1;
 	}
-		// these functions will add a count to the total every time a corresponding button is pressed during the survey.
+	// these functions above will add a count to the total every time a corresponding button is pressed during the survey.
+	
+	// create dictionary with bite and its count
+	Map<Integer, String> map = new HashMap<Integer, String>();
+	map.put(brownSpider,"Brown Recluse Spider");
+	map.put(blackSpider, "Black Widow Spider");
+	map.put(fireAnts, "Fire ants");
+	map.put(deerFlies, "Deer fly");
+	map.put(bees,"Bee");
+	map.put(chiggers, "Chigger");
+	map.put(mosquitoes, "Mosquito");
+	map.put(bedBugs, "Bedbug");
+	map.put(fleas, "Flea");
+	map.put(ticks, "Tick");	
 	
 	 // function to display result on the last page
 	 function showResults() {
 		 var biteid_Count = Math.max(brownSpider,deerFlies,ticks,bees,chiggers,mosquitoes,bedBugs,fleas)
-		  document.getElementById("resultText").innerHTML = "Your max result count is " + getName(biteid_Count) + " Count is " biteid_Count;
-	
+		 document.getElementById("resultText").innerHTML = System.out.println(" The result of your bite is " + map.get(biteid_Count)) + "Your max result count is " + biteid_Count;
 		 //calculations for the results will go here when we figure out the image analysis part
 		 
 	 }
