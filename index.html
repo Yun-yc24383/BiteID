@@ -220,7 +220,7 @@
 		
 		// if the result points to a certain insect, then a specific image that matches it will pop up on the page
 		if (biteid == "Brown Recluse Spider"){
-			// need to find an imamge
+			document.getElementbyId("resultImg").innerHTML = <img src = "https://www.pestworld.org/media/561842/brown-recluse-spider.jpg?preset=pestFeature1024" />
 		} else if (biteid == "Black Widow Spider"){
 			//find image
  		} else if (biteid == "Fire Ants"){
@@ -394,6 +394,7 @@
 			<p id="resultText"> </p> 
 			<a onclick= "showResults()" data-role="button"> Click here to view your results!</a>
 			<p> Does the image present here look similar to the bite you have? </p> 
+			<p id="resultImg"> </p>
 			
 		</div><!-- /content -->
 		<div data-role="footer">
