@@ -196,7 +196,8 @@
 		 //document.getElementById("resultText").innerHTML = System.out.println(" The result of your bite is " + map.get(str(ticks))) + "Your max result count is " + biteid_Count;
 		 // if bite count equals to the bite count of a specific bite then that will be the output result
 		 if (bite_Count == brownSpider){
-			 biteid = "Brown Recluse Spider"; 
+			 biteid = "Brown Recluse Spider";
+			 document.getElementbyId("resultImg").innerHTML = <img src = "https://www.pestworld.org/media/561842/brown-recluse-spider.jpg?preset=pestFeature1024" />;
 		 } else if (bite_Count == blackSpider){
 			 biteid = "Black Widow Spider"; 
 		 } else if (bite_Count == fireAnts){
@@ -220,7 +221,7 @@
 		
 		// if the result points to a certain insect, then a specific image that matches it will pop up on the page
 		if (biteid == "Brown Recluse Spider"){
-			document.getElementbyId("resultImg").innerHTML = <img src = "https://www.pestworld.org/media/561842/brown-recluse-spider.jpg?preset=pestFeature1024" />
+			// insert image here
 		} else if (biteid == "Black Widow Spider"){
 			//find image
  		} else if (biteid == "Fire Ants"){
