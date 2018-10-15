@@ -176,7 +176,31 @@
 		fleas = fleas + 1;
 	}
 	// these functions above will add a count to the total every time a corresponding button is pressed during the survey.
-	
+	function CalcResults(){
+		if (input[name="Leg[]":checked){
+			  fleasAdd();chiggersAdd();mosquitoesAdd();
+		}
+		else if (input[name="Arm[]":checked){
+			  allAdd();
+		}
+		else if (input[name="Folds[]":checked){
+			  ticksAdd();fleasAdd();chiggersAdd();mosquitoesAdd();
+		}
+	  	else if (input[name="Face[]":checked){
+			  allAdd();
+		}
+	  	else if (input[name="Back[]":checked){
+			  allAdd();
+		}
+	  	else if (input[name="Torso[]":checked){
+			  allAdd();
+		}
+	  	else if (input[name="Neck[]":checked){
+			  allAdd();
+		}
+	  }
+			  
+			  
 	 // function to display result on the last page
 	 function showResults() {
 		 var bite_Count = Math.max(brownSpider,deerFlies,ticks,bees,chiggers,mosquitoes,bedBugs,fleas)
@@ -206,29 +230,6 @@
 		 	 biteid = "Fleas";
 		 }
 	 
-		
-		// if the result points to a certain insect, then a specific image that matches it will pop up on the page
-		if (biteid == "Brown Recluse Spider"){
-			// insert image here
-		} else if (biteid == "Black Widow Spider"){
-			//find image
- 		} else if (biteid == "Fire Ants"){
-			  // insert image here 
-		} else if (biteid == "Deer Flies"){
-			 // insert image here
-		} else if (biteid == "Ticks"){
-			 // insert image here 
-		} else if (biteid == "Bees"){
-			 // insert image here
-		} else if (biteid == "Chiggers"){
-			 // insert image here
-		} else if (biteid == "Mosquitoes"){
-			 // insert image her
-		} else if (biteid == "Bedbugs"){
-			// insert image here
-		} else if (biteid == "Fleas"){
-			// insert image here
-		}
 		 //calculations for the results will go here when we figure out the image analysis part
 		 document.getElementById("resultText").innerHTML = " The result of your bite is " + biteid + " with a count score of " + bite_Count  ; 
 		 document.getElementById("resultImg").innerHTML = img; 
@@ -308,13 +309,20 @@
 			<p>Where is the bite located on your body? <br> Please select the location of your bite.</p>
 			<!-- checkboxes-->
 			<ul><!--unorderd bulleted list-->
-			    	<label><input class="checkbox" onclick="fleasAdd();chiggersAdd();mosquitoesAdd();" type="checkbox" name="check[]"> Legs/ankles </label>
-			    	<label><input class="checkbox" onclick="allAdd();" type="checkbox" name="check[]"> Arms </label>
-			    	<label><input class="checkbox" onclick="ticksAdd();fleasAdd();chiggersAdd();mosquitoesAdd();" type="checkbox" name="check[]"> Folds of skin (e.g. inner elbow, behind your knee)</label>
-			    	<label><input class="checkbox" onclick="allAdd();" type="checkbox" name="check[]"> Face </label>
-			    	<label><input class="checkbox" onclick="allAdd();" type="checkbox" name="check[]"> Back </label>
-		            	<label><input class="checkbox" onclick="allAdd();" type="checkbox" name="check[]"> Torso </label>
-				<label><input class="checkbox" onclick="allAdd();" type="checkbox" name="check[]"> Neck </label>
+			    	<!--<label><input class="checkbox" onclick="fleasAdd();chiggersAdd();mosquitoesAdd();" type="checkbox" name="Leg[]"> Legs/ankles </label>
+			    	<label><input class="checkbox" onclick="allAdd();" type="checkbox" name="Arm[]"> Arms </label>
+			    	<label><input class="checkbox" onclick="ticksAdd();fleasAdd();chiggersAdd();mosquitoesAdd();" type="checkbox" name="Folds[]"> Folds of skin (e.g. inner elbow, behind your knee)</label>
+			    	<label><input class="checkbox" onclick="allAdd();" type="checkbox" name="Face[]"> Face </label>
+			    	<label><input class="checkbox" onclick="allAdd();" type="checkbox" name="Back[]"> Back </label>
+		            	<label><input class="checkbox" onclick="allAdd();" type="checkbox" name="Torso[]"> Torso </label>
+				<label><input class="checkbox" onclick="allAdd();" type="checkbox" name="Neck[]"> Neck </label>-->
+				<label><input class="checkbox" type="checkbox" name="Leg[]"> Legs/ankles </label>
+			    	<label><input class="checkbox" type="checkbox" name="Arm[]"> Arms </label>
+			    	<label><input class="checkbox" type="checkbox" name="Folds[]"> Folds of skin (e.g. inner elbow, behind your knee)</label>
+			    	<label><input class="checkbox" type="checkbox" name="Face[]"> Face </label>
+			    	<label><input class="checkbox" type="checkbox" name="Back[]"> Back </label>
+		            	<label><input class="checkbox" type="checkbox" name="Torso[]"> Torso </label>
+				<label><input class="checkbox" type="checkbox" name="Neck[]"> Neck </label>
 			</ul><!-- end of list-->
 			<a href="#Q2" data-role="button" style="float:right">Next</a> <!-- link to next page-->
 		</div><!-- /content -->
