@@ -175,32 +175,33 @@
 		bedBugs = bedBugs + 1;
 		fleas = fleas + 1;
 	}
+	
 	// these functions above will add a count to the total every time a corresponding button is pressed during the survey.
-	/*function CalcResults(){
-		if (input[name="Leg[]":checked){
+	function CalcResults(){
+		if (document.getElementById("leg").checked = true){
 			  fleasAdd();chiggersAdd();mosquitoesAdd();
 		}
-		else if (input[name="Arm[]":checked){
+		else if (document.getElementById("arm").checked = true){
 			  allAdd();
 		}
-		else if (input[name="Folds[]":checked){
+		else if (document.getElementById("fold").checked = true){
 			  ticksAdd();fleasAdd();chiggersAdd();mosquitoesAdd();
 		}
-	  	else if (input[name="Face[]":checked){
+	  	else if (document.getElementById("face").checked = true){
 			  allAdd();
 		}
-	  	else if (input[name="Back[]":checked){
+	  	else if (document.getElementById("back").checked = true){
 			  allAdd();
 		}
-	  	else if (input[name="Torso[]":checked){
+	  	else if (document.getElementById("torso").checked = true){
 			  allAdd();
 		}
-	  	else if (input[name="Neck[]":checked){
+	  	else if (document.getElementById("neck").checked = true){
 			  allAdd();
 		}
 	  }
 			  
-	*/		  
+			  
 	 // function to display result on the last page
 	 function showResults() {
 		 var bite_Count = Math.max(brownSpider,deerFlies,ticks,bees,chiggers,mosquitoes,bedBugs,fleas)
@@ -325,13 +326,13 @@
 			    	<label><input class="checkbox" onclick="allAdd();" type="checkbox" name="Back[]"> Back </label>
 		            	<label><input class="checkbox" onclick="allAdd();" type="checkbox" name="Torso[]"> Torso </label>
 				<label><input class="checkbox" onclick="allAdd();" type="checkbox" name="Neck[]"> Neck </label>-->
-				<label><input class="checkbox" type="checkbox" name="Leg[]"> Legs/ankles </label>
-			    	<label><input class="checkbox" type="checkbox" name="Arm[]"> Arms </label>
-			    	<label><input class="checkbox" type="checkbox" name="Folds[]"> Folds of skin (e.g. inner elbow, behind your knee)</label>
-			    	<label><input class="checkbox" type="checkbox" name="Face[]"> Face </label>
-			    	<label><input class="checkbox" type="checkbox" name="Back[]"> Back </label>
-		            	<label><input class="checkbox" type="checkbox" name="Torso[]"> Torso </label>
-				<label><input class="checkbox" type="checkbox" name="Neck[]"> Neck </label>
+				<label><input class="checkbox" type="checkbox" name="Leg[]" id="leg"> Legs/ankles </label>
+			    	<label><input class="checkbox" type="checkbox" name="Arm[]" id="arm"> Arms </label>
+			    	<label><input class="checkbox" type="checkbox" name="Folds[]" id="fold"> Folds of skin (e.g. inner elbow, behind your knee)</label>
+			    	<label><input class="checkbox" type="checkbox" name="Face[]" id="face"> Face </label>
+			    	<label><input class="checkbox" type="checkbox" name="Back[]" id="back"> Back </label>
+		            	<label><input class="checkbox" type="checkbox" name="Torso[]" id="torso"> Torso </label>
+				<label><input class="checkbox" type="checkbox" name="Neck[]" id="neck"> Neck </label>
 			</ul><!-- end of list-->
 			<a href="#Q2" data-role="button" style="float:right">Next</a> <!-- link to next page-->
 		</div><!-- /content -->
