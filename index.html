@@ -178,7 +178,8 @@
 	
 	// these functions above will add a count to the total every time a corresponding button is pressed during the survey.
 	function CalcResults(){
-		if (document.getElementById("leg").checked == true){
+		var leg = document.getElementById("leg").checked;
+		if (leg == "ture"){
 			  fleasAdd();chiggersAdd();mosquitoesAdd();
 		}
 		else if (document.getElementById("arm").checked == true){
