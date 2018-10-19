@@ -178,7 +178,7 @@
 	}
 	
 	// these functions above will add a count to the total every time a corresponding button is pressed during the survey.
-	function CalcResults(){
+	function CalcResults_location(){
 		if (document.getElementById("leg").checked == true){
 			  fleasAdd();chiggersAdd();mosquitoesAdd();
 		}
@@ -200,7 +200,21 @@
 	  	else if (document.getElementById("neck").checked == true){
 			  allAdd();
 		}
-		else if (document.getElementById("bump").checked == true){
+		else if (document.getElementById("itch").checked == true){
+			  mosquitoesAdd();fireAntsAdd();chiggersAdd();bedBugsAdd();fleasAdd();brownSpiderAdd();deerFliesAdd();
+		}
+		else if (document.getElementById("pain").checked == true){
+			  brownSpiderAdd();deerFliesAdd();fireAntsAdd();beesAdd();blackSpiderAdd();
+		}
+		else if (document.getElementById("burn").checked == true){
+			  fireAntsAdd();beesAdd();
+		}
+		else if (document.getElementById("fever").checked == true){
+			  brownSpiderAdd();
+		}
+	}
+	function CaclResults_appear(){
+		if (document.getElementById("bump").checked == true){
 			  mosquitoesAdd();
 		}
 		else if (document.getElementById("redspot").checked == true){
@@ -233,21 +247,9 @@
 	  	else if (document.getElementById("blue").checked == true){
 			  brownSpiderAdd();
 		}
-		else if (document.getElementById("itch").checked == true){
-			  mosquitoesAdd();fireAntsAdd();chiggersAdd();bedBugsAdd();fleasAdd();brownSpiderAdd();deerFliesAdd();
-		}
-		else if (document.getElementById("pain").checked == true){
-			  brownSpiderAdd();deerFliesAdd();fireAntsAdd();beesAdd();blackSpiderAdd();
-		}
-		else if (document.getElementById("burn").checked == true){
-			  fireAntsAdd();beesAdd();
-		}
-		else if (document.getElementById("fever").checked == true){
-			  brownSpiderAdd();
-		}
+	}
 		
 		
-	  }
 			  
 			  
 	 // function to display result on the last page
@@ -441,7 +443,7 @@
 		</div><!-- /header -->
 		<div role="main" class="ui-content">
 			<p id="resultText"> </p> 
-			<a onclick= "CalcResults();showResults();" data-role="button"> Click here to view your results!</a>
+			<a onclick= "CalcResults_location();CaclResults_appear();showResults();" data-role="button"> Click here to view your results!</a>
 			<p> Does the image present here look similar to the bite you have? </p> 
 			<p id="resultImg"> </p>
 			
