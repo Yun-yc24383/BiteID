@@ -178,73 +178,71 @@
 	}
 	
 	// these functions above will add a count to the total every time a corresponding button is pressed during the survey.
-	function CalcResults_location(){
+	function CalcResults(){
 		if (document.getElementById("leg").checked == true){
 			  fleasAdd();chiggersAdd();mosquitoesAdd();
 		}
-		else if (document.getElementById("arm").checked == true){
+		if (document.getElementById("arm").checked == true){
 			  allAdd();
 		}
-		else if (document.getElementById("fold").checked == true){
+		if (document.getElementById("fold").checked == true){
 			  ticksAdd();fleasAdd();chiggersAdd();mosquitoesAdd();
 		}
-	  	else if (document.getElementById("face").checked == true){
+	  	if (document.getElementById("face").checked == true){
 			  allAdd();
 		}
-	  	else if (document.getElementById("back").checked == true){
+	  	if (document.getElementById("back").checked == true){
 			  allAdd();
 		}
-	  	else if (document.getElementById("torso").checked == true){
+	  	if (document.getElementById("torso").checked == true){
 			  allAdd();
 		}
-	  	else if (document.getElementById("neck").checked == true){
+	  	if (document.getElementById("neck").checked == true){
 			  allAdd();
 		}
-		else if (document.getElementById("itch").checked == true){
-			  mosquitoesAdd();fireAntsAdd();chiggersAdd();bedBugsAdd();fleasAdd();brownSpiderAdd();deerFliesAdd();
-		}
-		else if (document.getElementById("pain").checked == true){
-			  brownSpiderAdd();deerFliesAdd();fireAntsAdd();beesAdd();blackSpiderAdd();
-		}
-		else if (document.getElementById("burn").checked == true){
-			  fireAntsAdd();beesAdd();
-		}
-		else if (document.getElementById("fever").checked == true){
-			  brownSpiderAdd();
-		}
-	}
-	function CaclResults_appear(){
 		if (document.getElementById("bump").checked == true){
 			  mosquitoesAdd();
 		}
-		else if (document.getElementById("redspot").checked == true){
+		if (document.getElementById("redspot").checked == true){
 			  ticksAdd();
 		}
-	  	else if (document.getElementById("mark").checked == true){
+	  	if (document.getElementById("mark").checked == true){
 			  bedBugsAdd();
 		}
-	  	else if (document.getElementById("cluster").checked == true){
+	  	if (document.getElementById("cluster").checked == true){
 			  bedBugsAdd();fleasAdd();chiggersAdd();
 		}
-	  	else if (document.getElementById("line").checked == true){
+	  	if (document.getElementById("line").checked == true){
 			  bedBugsAdd();fleasAdd();
 		}
-	  	else if (document.getElementById("stinger").checked == true){
+	  	if (document.getElementById("stinger").checked == true){
 			 beesAdd();
 		}
-		else if (document.getElementById("tick").checked == true){
+		if (document.getElementById("tick").checked == true){
 			  ticksAdd();
 		}
-	  	else if (document.getElementById("bullrash").checked == true){
+	  	if (document.getElementById("bullrash").checked == true){
 			  ticksAdd();
 		}
-	  	else if (document.getElementById("blister").checked == true){
+	  	if (document.getElementById("blister").checked == true){
 			  fireAntsAdd();
 		}
-	  	else if (document.getElementById("puncmarks").checked == true){
+	  	if (document.getElementById("puncmarks").checked == true){
 			  blackSpiderAdd();
 		}
-	  	else if (document.getElementById("blue").checked == true){
+	  	if (document.getElementById("blue").checked == true){
+			  brownSpiderAdd();
+		}
+		if (document.getElementById("itch").checked == true){
+			  mosquitoesAdd();fireAntsAdd();chiggersAdd();bedBugsAdd();fleasAdd();brownSpiderAdd();deerFliesAdd();
+		}
+		if (document.getElementById("pain").checked == true){
+			  brownSpiderAdd();deerFliesAdd();fireAntsAdd();beesAdd();blackSpiderAdd();
+		}
+		if (document.getElementById("burn").checked == true){
+			  fireAntsAdd();beesAdd();
+		}
+		if (document.getElementById("fever").checked == true){
 			  brownSpiderAdd();
 		}
 	}
@@ -443,7 +441,7 @@
 		</div><!-- /header -->
 		<div role="main" class="ui-content">
 			<p id="resultText"> </p> 
-			<a onclick= "CalcResults_location();CaclResults_appear();showResults();" data-role="button"> Click here to view your results!</a>
+			<a onclick= "CalcResults();showResults();" data-role="button"> Click here to view your results!</a>
 			<p> Does the image present here look similar to the bite you have? </p> 
 			<p id="resultImg"> </p>
 			
