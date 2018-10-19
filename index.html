@@ -179,8 +179,7 @@
 	
 	// these functions above will add a count to the total every time a corresponding button is pressed during the survey.
 	function CalcResults(){
-		var leg = document.getElementById("leg").checked;
-		if (leg == true){
+		if (document.getElementById("leg").checked == true){
 			  fleasAdd();chiggersAdd();mosquitoesAdd();
 		}
 		else if (document.getElementById("arm").checked == true){
@@ -201,6 +200,53 @@
 	  	else if (document.getElementById("neck").checked == true){
 			  allAdd();
 		}
+		else if (document.getElementById("bump").checked == true){
+			  mosquitoesAdd()();
+		}
+		else if (document.getElementById("redspot").checked == true){
+			  ticksAdd();
+		}
+	  	else if (document.getElementById("mark").checked == true){
+			  bedBugsAdd();
+		}
+	  	else if (document.getElementById("cluster").checked == true){
+			  bedBugsAdd(), fleasAdd(), chiggersAdd();
+		}
+	  	else if (document.getElementById("line").checked == true){
+			  bedBugsAdd(), fleasAdd();
+		}
+	  	else if (document.getElementById("stinger").checked == true){
+			 beesAdd();
+		}
+		else if (document.getElementById("tick").checked == true){
+			  ticksAdd();
+		}
+	  	else if (document.getElementById("bullrash").checked == true){
+			  ticksAdd();
+		}
+	  	else if (document.getElementById("blister").checked == true){
+			  fireAntsAdd();
+		}
+	  	else if (document.getElementById("puncmarks").checked == true){
+			  blackSpiderAdd();
+		}
+	  	else if (document.getElementById("blue").checked == true){
+			  brownSpiderAdd();
+		}
+		else if (document.getElementById("itch").checked == true){
+			  mosquitoesAdd();fireAntsAdd();chiggersAdd();bedBugsAdd();fleasAdd();brownSpiderAdd();deerFliesAdd();
+		}
+		else if (document.getElementById("pain").checked == true){
+			  brownSpiderAdd();deerFliesAdd();fireAntsAdd();beesAdd();blackSpiderAdd();
+		}
+		else if (document.getElementById("burn").checked == true){
+			  fireAntsAdd();beesAdd();();
+		}
+		else if (document.getElementById("fever").checked == true){
+			  brownSpiderAdd();
+		}
+		
+		
 	  }
 			  
 			  
@@ -353,17 +399,17 @@
 			<p>What does your bite(s) look like? <br> Please select the appearances that apply to the bite(s) you have.</p>
 			<!-- checkboxes-->
 			<ul><!--unorderd bulleted list-->
-			    	<label><input class="checkbox" onclick="mosquitoesAdd();" type="checkbox" name="check[]"> Bump </label>
-				<label><input class="checkbox" onclick="ticksAdd();" type="checkbox" name="check[]"> Red spot </label>
-			    	<label><input class="checkbox" onclick="bedBugsAdd();" type="checkbox" name="check[]"> Bite mark </label>
-			    	<label><input class="checkbox" onclick="bedBugsAdd();fleasAdd();chiggersAdd();" type="checkbox" name="check[]"> Clustered in group</label>
-			    	<label><input class="checkbox" onclick="bedBugsAdd();fleasAdd();" type="checkbox" name="check[]"> Form a line </label>
-			    	<label><input class="checkbox" onclick="beesAdd();" type="checkbox" name="check[]"> Stinger presented </label>
-				<label><input class="checkbox" onclick="ticksAdd();" type="checkbox" name="check[]"> Bug/tick presented on bite </label>
-				<label><input class="checkbox" onclick="ticksAdd();" type="checkbox" name="check[]"> Bull's eye rash </label>
-				<label><input class="checkbox" onclick="fireAntsAdd();" type="checkbox" name="check[]"> Blister </label>
-				<label><input class="checkbox" onclick="blackSpiderAdd();" type="checkbox" name="check[]"> 2 puncture marks </label>
-				<label><input class="checkbox" onclick="brownSpiderAdd();" type="checkbox" name="check[]"> Blue/purple-ish color around the bite </label>
+			    	<label><input class="checkbox" type="checkbox" name="check[]" id="bump"> Bump </label>
+				<label><input class="checkbox" type="checkbox" name="check[]" id="redspot"> Red spot </label>
+			    	<label><input class="checkbox" type="checkbox" name="check[]" id="mark"> Bite mark </label>
+			    	<label><input class="checkbox" type="checkbox" name="check[]" id="cluster"> Clustered in group</label>
+			    	<label><input class="checkbox" type="checkbox" name="check[]" id="line"> Form a line </label>
+			    	<label><input class="checkbox" type="checkbox" name="check[]" id="stinger"> Stinger presented </label>
+				<label><input class="checkbox" type="checkbox" name="check[]" id="tick"> Bug/tick presented on bite </label>
+				<label><input class="checkbox" type="checkbox" name="check[]" id="bullrash"> Bull's eye rash </label>
+				<label><input class="checkbox" type="checkbox" name="check[]" id="blister"> Blister </label>
+				<label><input class="checkbox" type="checkbox" name="check[]" id="puncmarks"> 2 puncture marks </label>
+				<label><input class="checkbox" type="checkbox" name="check[]" id="blue"> Blue/purple-ish color around the bite </label>
 			</ul><!-- end of list-->
 			<a href="#Q3" data-role="button" style="float:right">Next</a> <!-- link to next page-->
 		</div><!-- /content -->
@@ -382,10 +428,10 @@
 			<p>What symptoms do you have? <br>Please select the symptoms associate to the bite(s) you have.</p>
 			<!-- checkboxes-->
 			<ul><!--unorderd bulleted list-->
-			    	<label><input class="checkbox" onclick="mosquitoesAdd();fireAntsAdd();chiggersAdd();bedBugsAdd();fleasAdd();brownSpiderAdd();deerFliesAdd();" type="checkbox" name="check[]"> Itch </label>
-			    	<label><input class="checkbox" onclick="brownSpiderAdd();deerFliesAdd();fireAntsAdd();beesAdd();blackSpiderAdd();" type="checkbox" name="check[]"> Pain </label>
-			    	<label><input class="checkbox" onclick="fireAntsAdd();beesAdd();" type="checkbox" name="check[]"> Burning sensation</label>
-			    	<label><input class="checkbox" onclick="brownSpiderAdd();"type="checkbox" name="check[]"> Fever </label>
+			    	<label><input class="checkbox" type="checkbox" name="check[]" id="itch"> Itch </label>
+			    	<label><input class="checkbox" type="checkbox" name="check[]" id="pain"> Pain </label>
+			    	<label><input class="checkbox" type="checkbox" name="check[]" id="burn"> Burning sensation</label>
+			    	<label><input class="checkbox" type="checkbox" name="check[]" id="fever"> Fever </label>
 			</ul><!-- end of list-->
 			<a href="#results" data-role="button" style="float:right">Next</a> <!-- link to next page-->
 		</div><!-- /content -->
