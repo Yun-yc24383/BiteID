@@ -245,12 +245,11 @@
 		if (document.getElementById("fever").checked == true){
 			  brownSpiderAdd();
 		}
-	}
+	}	//for the above functions, it means that if a checkmark is checked, then it will add one to the insects listed after it.
 		
 		
 			  
 			  
-	 // function to display result on the last page
 	 function showResults() {
 		 var bite_Count = Math.max(deerFlies,brownSpider,ticks,bees,chiggers,mosquitoes,bedBugs,fleas)
 		 //document.getElementById("resultText").innerHTML = System.out.println(" The result of your bite is " + map.get(str(ticks))) + "Your max result count is " + biteid_Count;
@@ -292,6 +291,7 @@
 		 document.getElementById("resultText").innerHTML = " The result of your bite is " + biteid + " with a count score of " + bite_Count  ; 
 		 document.getElementById("resultImg").innerHTML = img; 
 	 }
+		// the code above is the function to show the results. It has the if statements to call results, and an image that corresponds with it. 
 	 
 </script>
 
