@@ -184,13 +184,13 @@
 		}
 		if (document.getElementById("arm").checked == true){
 			  allAdd();
-		}
+		}	  //adding to all of the variables, because this location is possible for all bites
 		if (document.getElementById("fold").checked == true){
 			  ticksAdd();fleasAdd();chiggersAdd();mosquitoesAdd();
 		}
 	  	if (document.getElementById("face").checked == true){
 			  allAdd();
-		}
+		}	  //adding to all because there isn't one unique insect that bites the face (in our set)
 	  	if (document.getElementById("back").checked == true){
 			  allAdd();
 		}
@@ -257,7 +257,9 @@
 		 var img = '';
 		 if (bite_Count == brownSpider){
 			 biteid = "black Spider";
+			 	//the id will allow this to be called somewhere else
 			 img = '<img src = "https://images.emedicinehealth.com/images/4453/4453-4474-10729-25040tn.jpg">';
+			 	//an image is included so that the user wil be able to compare it to their own
 		 } else if (bite_Count == blackSpider){
 			 biteid = "Black Widow Spider"; 
 			 img = '<img src = "https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/bad_bugs_slideshow/flickr_photo_of_black_window_bite.jpg?resize=646px:*&output-quality=100">';
@@ -290,7 +292,9 @@
 	 
 		 //calculations for the results will go here when we figure out the image analysis part
 		 document.getElementById("resultText").innerHTML = " The result of your bite is " + biteid + " with a count score of " + bite_Count  ; 
+		 	//call for the text (and variables)
 		 document.getElementById("resultImg").innerHTML = img; 
+		 	//call for the image
 	 }
 		// the code above is the function to show the results. It has the if statements to call results, and an image that corresponds with it. 
 	 
@@ -346,8 +350,10 @@
 		context.fillText("Picture of your bite will be displayed here.", 10, 20); // state displayed text content and position. 
 		</script>
 	-->
-		<p> Click  START  to start the survey after your image is uploaded. </p>  <!-- content shown on title page, break is added by using <br> in each line-->
-		<a href="#Q1" data-role="button">START</a>	<!-- Add a button that links to question 1 -->
+		<p> Click  START  to start the survey after your image is uploaded. </p>  
+			<!-- content shown on title page, break is added by using <br> in each line-->
+		<a href="#Q1" data-role="button">START</a>	
+			<!-- Add a button that links to question 1 -->
 			<!-- on click, this will launch to the first page of the survey.-->
 			
 		</div><!-- /content -->
