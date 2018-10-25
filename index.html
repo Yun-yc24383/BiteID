@@ -294,6 +294,8 @@
 		 document.getElementById("resultImg").innerHTML = img; 
 		 document.getElementById("yes_result").innerHTML = " Based on your results, there is a possibility that you have a bite from " + biteid; 
 		 	//call for the image
+		 document.getElementById("yes_button").style.display = "block";
+		 document.getElementById("no_button").style.display = "block";
 	 }
 		// the code above is the function to show the results. It has the if statements to call results, and an image that corresponds with it. 
 	 
@@ -451,8 +453,8 @@
 			<p> Does the image present here look similar to the bite you have? </p> 
 			<p id="resultImg"> </p>
 			<p id="result_check"> </p>
-			<a href="#yes" data-role="button" id = yes_button style = "display:none">Yes</a>
-			<a href="#no" data-role="button" id= no_button style = "display:none">No</a> 
+			<a href="#yes" data-role="button" id = "yes_button" style = "display:none">Yes</a>
+			<a href="#no" data-role="button" id= "no_button" style = "display:none">No</a> 
 			
 		</div><!-- /content -->
 		<div data-role="footer">
