@@ -110,7 +110,7 @@
 	// these functions above will add a count to the total every time a corresponding button is pressed during the survey.
 	function CalcResults(){
 		if (document.getElementById("leg").checked == true){
-			  fleasAdd();chiggersAdd();mosquitoesAdd();
+			  bedBugsAdd();fireAntsAdd();fleasAdd();chiggersAdd();mosquitoesAdd();
 		}
 		if (document.getElementById("arm").checked == true){
 			  allAdd();
@@ -131,13 +131,10 @@
 			  allAdd();
 		}
 		if (document.getElementById("bump").checked == true){
-			  mosquitoesAdd();
+			  mosquitoesAdd();fireAntsAdd();bedBugsAdd();chiggersAdd();
 		}
-		if (document.getElementById("redspot").checked == true){
-			  ticksAdd();
-		}
-	  	if (document.getElementById("mark").checked == true){
-			  bedBugsAdd();
+		if (document.getElementById("red/mark").checked == true){
+			  ticksAdd(); bedBugsAdd(); beesAdd();fleasAdd();
 		}
 	  	if (document.getElementById("cluster").checked == true){
 			  bedBugsAdd();fleasAdd();chiggersAdd();
@@ -146,7 +143,7 @@
 			  bedBugsAdd();fleasAdd();
 		}
 	  	if (document.getElementById("stinger").checked == true){
-			 beesAdd();
+			  beesAdd();
 		}
 		if (document.getElementById("tick").checked == true){
 			  ticksAdd();
@@ -157,7 +154,7 @@
 	  	if (document.getElementById("blister").checked == true){
 			  fireAntsAdd();
 		}
-	  	if (document.getElementById("puncmarks").checked == true){
+	  	if (document.getElementById("fangmark").checked == true){
 			  blackSpiderAdd();
 		}
 	  	if (document.getElementById("blue").checked == true){
@@ -171,9 +168,6 @@
 		}
 		if (document.getElementById("burn").checked == true){
 			  fireAntsAdd();beesAdd();
-		}
-		if (document.getElementById("fever").checked == true){
-			  brownSpiderAdd();
 		}
 	}	//for the above functions, it means that if a checkmark is checked, then it will add one to the insects listed after it.
 				  
@@ -344,15 +338,14 @@
 			<!-- checkboxes-->
 			<ul><!--unorderd bulleted list-->
 			    	<label><input class="checkbox" type="checkbox" name="check[]" id="bump"> Bump </label>
-				<label><input class="checkbox" type="checkbox" name="check[]" id="redspot"> Red spot </label>
-			    	<label><input class="checkbox" type="checkbox" name="check[]" id="mark"> Bite mark </label>
+				<label><input class="checkbox" type="checkbox" name="check[]" id="red/mark"> Bite mark or single red spot </label>
 			    	<label><input class="checkbox" type="checkbox" name="check[]" id="cluster"> Clustered in group</label>
 			    	<label><input class="checkbox" type="checkbox" name="check[]" id="line"> Form a line </label>
 			    	<label><input class="checkbox" type="checkbox" name="check[]" id="stinger"> Stinger presented </label>
 				<label><input class="checkbox" type="checkbox" name="check[]" id="tick"> Bug/tick presented on bite </label>
 				<label><input class="checkbox" type="checkbox" name="check[]" id="bullrash"> Bull's eye rash </label>
 				<label><input class="checkbox" type="checkbox" name="check[]" id="blister"> Blister (white bump in the middle of the bite) </label>
-				<label><input class="checkbox" type="checkbox" name="check[]" id="puncmarks"> 2 puncture marks </label>
+				<label><input class="checkbox" type="checkbox" name="check[]" id="fangmark"> 2 fang marks </label>
 				<label><input class="checkbox" type="checkbox" name="check[]" id="blue"> Blue/purple-ish color around the bite </label>
 			</ul><!-- end of list-->
 			<a href="#Q3" data-role="button" style="float:right">Next</a> <!-- link to next page-->
@@ -375,7 +368,6 @@
 			    	<label><input class="checkbox" type="checkbox" name="check[]" id="itch"> Itch </label>
 			    	<label><input class="checkbox" type="checkbox" name="check[]" id="pain"> Pain </label>
 			    	<label><input class="checkbox" type="checkbox" name="check[]" id="burn"> Burning sensation</label>
-			    	<label><input class="checkbox" type="checkbox" name="check[]" id="fever"> Fever </label>
 			</ul><!-- end of list-->
 			<a href="#results" data-role="button" style="float:right">Next</a> <!-- link to next page-->
 		</div><!-- /content -->
