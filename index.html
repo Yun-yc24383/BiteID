@@ -245,6 +245,9 @@
 		 document.getElementById("fin_resultTxt").innerHTML = " The result of your bite is most likely " + biteid + " with a count score of " + bite_Count  ; 
 		 document.getElementById("fin_resultImg").innerHTML = img; 
 		 
+		 // make the view result button disappear
+		 document.getElementById("result_button").style.display = "none"; 
+		 document.getElementById("fin_result_button").style.display = "none"; 
 	 }
 		
 	 
@@ -404,10 +407,9 @@
 		</div><!-- /header -->
 		<div role="main" class="ui-content">
 			<p id="resultText"> </p> 
-			<a onclick= "CalcResults();showResults();" data-role="button"> Click here to view your results!</a>
+			<a onclick= "CalcResults();showResults();" data-role="button" style= "display:block" id="result_button"> Click here to view your results!</a>
 			<p> Does the image present here look similar to the bite you have? </p> 
 			<p id="resultImg"> </p>
-			<!--<p id="result_check"> </p>-->
 			<a href="#yes" data-role="button" id = "yes_button" style = "display:none">Yes</a>
 			<a href="#no" data-role="button" id= "no_button" style = "display:none">No</a> 
 			
@@ -610,11 +612,9 @@
 		</div><!-- /header -->
 		<div role="main" class="ui-content">
 			<p id="fin_resultTxt"> </p> 
-			<a onclick= "CalcResults();showResults();" data-role="button"> Click here to view your results!</a>
+			<a onclick= "CalcResults();showResults();" data-role="button" style= "display:block" id="fin_result_button"> Click here to view your results!</a>
 			<p id="fin_resultImg"> </p>
 			<!-- calling the result image into the print function -->
-			<!--<p id="result_check"> </p>
-			<!-- the result from the checkboxes -->
 			<p> Thank you for using our survey! </p>
 		</div><!-- /content -->
 		<div data-role="footer">
