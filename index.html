@@ -50,6 +50,7 @@
  </script>
 
 <script>
+	//All of these variables are set to 0 so that they will reset every time the app is launched.
 	var deerFlies = 0;
 	var ticks = 0;
 	var bees = 0;
@@ -60,10 +61,9 @@
 	var fleas = 0;
 	var fireAnts = 0;
 	var blackSpider = 0;
-		//all of these variables are set to 0 so that they will reset every time the app is launched.
-	 
-	 
-
+		
+	  
+	//These functions below will add a count to the total every time a corresponding button is pressed during the survey.
 	function deerFliesAdd(){
 		deerFlies = deerFlies + 1;
 	}
@@ -107,8 +107,10 @@
 		fleas = fleas + 1;
 	}
 	
-	// these functions above will add a count to the total every time a corresponding button is pressed during the survey.
+	
+	//This function checks that if a checkmark is checked, then it will add one to the insects listed after it.
 	function CalcResults(){
+		// bite locations
 		if (document.getElementById("leg").checked == true){
 			  bedBugsAdd();fireAntsAdd();fleasAdd();chiggersAdd();mosquitoesAdd();
 		}
@@ -130,6 +132,7 @@
 	  	if (document.getElementById("neck").checked == true){
 			  allAdd();
 		}
+		// bite appearances
 		if (document.getElementById("bump").checked == true){
 			  mosquitoesAdd();fireAntsAdd();bedBugsAdd();chiggersAdd();
 		}
@@ -160,6 +163,7 @@
 	  	if (document.getElementById("blue").checked == true){
 			  brownSpiderAdd();
 		}
+		// bite symptoms
 		if (document.getElementById("itch").checked == true){
 			  mosquitoesAdd();fireAntsAdd();chiggersAdd();bedBugsAdd();fleasAdd();brownSpiderAdd();deerFliesAdd();
 		}
@@ -169,13 +173,14 @@
 		if (document.getElementById("burn").checked == true){
 			  fireAntsAdd();beesAdd();
 		}
-	}	//for the above functions, it means that if a checkmark is checked, then it will add one to the insects listed after it.
+	}
 				  
-			  
+	// This function shows the calculated results. 
+	// It has the if statements to call results, and an image that corresponds with it.
 	 function showResults() {
 		 var bite_Count = Math.max(deerFlies,brownSpider,ticks,bees,chiggers,mosquitoes,bedBugs,fleas)
-		 // if bite count equals to the bite count of a specific bite then that will be the output result
-		 var img = '';
+		 // if a specific bite count equals to the maximum bite count found then that will be the output result
+		 var img = ''; // image variable that will be display on the result page. 
 		 if (bite_Count == brownSpider){
 			 biteid = "Brown Recluse Spider";
 			 	//the id will allow this to be called somewhere else
@@ -222,17 +227,21 @@
 			 disease = "Murine typhus, mycoplasma haemofelis, Tapeworms, Cat Scratch Disease, and more.";
 		 }
 	 
-		 //calculations for the results will go here when we figure out the image analysis part
+		 // calculations for the results will go here when we figure out the image analysis part
+		 
+		 // display the text and image to display the result in the "result" page. 
 		 document.getElementById("resultText").innerHTML = " The result of your bite is most likely " + biteid + " with a count score of " + bite_Count  ; 
-		 	//call for the text (and variables)
 		 document.getElementById("resultImg").innerHTML = img; 
+		 
+		 // display text results in the "yes" page. 
 		 document.getElementById("yes_result").innerHTML = " The result of your bite is most likely " + biteid + ".";
 		 document.getElementById("yes_result2").innerHTML = " Based on your results, there is a possibility that you might have these vector borne diseases: " + disease; 
-		 	//call for the image
+		
+		 // make yes/no buttons showup when after the result is viewed. 
 		 document.getElementById("yes_button").style.display = "block";
 		 document.getElementById("no_button").style.display = "block";
 	 }
-		// the code above is the function to show the results. It has the if statements to call results, and an image that corresponds with it. 
+		
 	 
 </script>
 
@@ -244,6 +253,7 @@
 	h2 {text-align:center;}  /* set all header 2 to center aligned*/
 	h4 {text-align:center;}  /* set all header 4 to center aligned*/
 	
+	/* set image style*/
 	img {
 		display: block;
     		margin-left: auto;
