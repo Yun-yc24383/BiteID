@@ -296,8 +296,11 @@
 			 disease = "Murine typhus, mycoplasma haemofelis, Tapeworms, Cat Scratch Disease, and more.";
 		}
 		// display text results in the final result page. 
-		document.getElementById("fin_resultTxt").innerHTML = " The result of your bite is most likely " + biteid + " with a count score of " + bite_Count  ; 
+		document.getElementById("fin_resultTxt1").innerHTML = " The result of your bite is most likely " + biteid + " with a count score of " + bite_Count  ; 
 		document.getElementById("fin_resultImg").innerHTML = img; 
+		//
+		document.getElementById("fin_resultTxt2").innerHTML = " The result of your bite is most likely " + biteid + ".";
+	 	document.getElementById("fin_resultTxt3").innerHTML = " Based on your results, there is a possibility that you might have these vector borne diseases: " + disease; 
 		
 		// make the view result button disappear after result is displayed
 		document.getElementById("fin_result_button").style.display = "none"; 
@@ -673,7 +676,9 @@
 		</div><!-- /header -->
 		<div role="main" class="ui-content">
 			<a onclick= "CalcResults();show_FinResult();" data-role="button" style= "display:block" id="fin_result_button"> Click here to view your results!</a>
-			<p id="fin_resultTxt"> </p> 
+			<p id="fin_resultTxt1"> </p> 
+			<p id="fin_resultTxt2"> </p>
+			<p id="fin_resultTxt3"> </p>
 			<p id="fin_resultImg"> </p>
 			<!-- calling the result image into the print function -->
 			<p> Thank you for using our survey! </p>
