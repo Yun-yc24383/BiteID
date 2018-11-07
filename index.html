@@ -247,8 +247,10 @@
 		 
 		 // make the view result button disappear
 		 document.getElementById("result_button").style.display = "none"; 
-		 document.getElementById("fin_result_button").style.display = "none"; 
 	 }
+	function show_FinResult{
+		 document.getElementById("fin_result_button").style.display = "none"; 
+	}
 		
 	 
 </script>
@@ -612,7 +614,7 @@
 		</div><!-- /header -->
 		<div role="main" class="ui-content">
 			<p id="fin_resultTxt"> </p> 
-			<a onclick= "CalcResults();showResults();" data-role="button" style= "display:block" id="fin_result_button"> Click here to view your results!</a>
+			<a onclick= "CalcResults();showResults();show_FinResult();" data-role="button" style= "display:block" id="fin_result_button"> Click here to view your results!</a>
 			<p id="fin_resultImg"> </p>
 			<!-- calling the result image into the print function -->
 			<p> Thank you for using our survey! </p>
