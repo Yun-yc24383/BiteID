@@ -402,7 +402,7 @@
 			<a onclick= "CalcResults();showResults();" data-role="button"> Click here to view your results!</a>
 			<p> Does the image present here look similar to the bite you have? </p> 
 			<p id="resultImg"> </p>
-			<p id="result_check"> </p>
+			<!--<p id="result_check"> </p>-->
 			<a href="#yes" data-role="button" id = "yes_button" style = "display:none">Yes</a>
 			<a href="#no" data-role="button" id= "no_button" style = "display:none">No</a> 
 			
@@ -411,8 +411,9 @@
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
-	</div><!--/Results--> 
-	<!-- this page is for when the user clicks yes in the results -->
+	</div><!--/Results-->
+	 
+<!-- this page is for when the user clicks yes in the results -->
 	<div data-role="page" id="yes">
 		<div data-role="header">
 			<h1>Bug Bite ID</h1>
@@ -603,11 +604,11 @@
 			<!-- Name of the header at the top of the page -->
 		</div><!-- /header -->
 		<div role="main" class="ui-content">
-			<p id="resultText"> </p> 
+			<p id="fin_resultTxt"> </p> 
 			<a onclick= "CalcResults();showResults();" data-role="button"> Click here to view your results!</a>
-			<p id="resultImg"> </p>
+			<p id="fin_resultImg"> </p>
 			<!-- calling the result image into the print function -->
-			<p id="result_check"> </p>
+			<!--<p id="result_check"> </p>
 			<!-- the result from the checkboxes -->
 			<p> Thank you for using our survey! </p>
 		</div><!-- /content -->
