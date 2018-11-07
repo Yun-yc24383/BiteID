@@ -241,15 +241,66 @@
 		 document.getElementById("yes_button").style.display = "block";
 		 document.getElementById("no_button").style.display = "block";
 		 
-		 // display text results in the final result page. 
-		 document.getElementById("fin_resultTxt").innerHTML = " The result of your bite is most likely " + biteid + " with a count score of " + bite_Count  ; 
-		 document.getElementById("fin_resultImg").innerHTML = img; 
-		 
-		 // make the view result button disappear
+		 // make the view result button disappear after result is displayed
 		 document.getElementById("result_button").style.display = "none"; 
 	 }
+	
+	// This function shows the result in the final result page. 
 	function show_FinResult() {
-		 document.getElementById("fin_result_button").style.display = "none"; 
+		var bite_Count = Math.max(deerFlies,brownSpider,ticks,bees,chiggers,mosquitoes,bedBugs,fleas)
+		 // if a specific bite count equals to the maximum bite count found then that will be the output result
+		var img = ''; // image variable that will be display on the result page. 
+		if (bite_Count == brownSpider){
+			 biteid = "Brown Recluse Spider";
+				//the id will allow this to be called somewhere else
+			 img = '<img src = "https://images.emedicinehealth.com/images/4453/4453-4474-10729-25040tn.jpg" style="width:300px;height:300px;">';
+				//an image is included so that the user wil be able to compare it to their own
+			 disease = "no known diseases! However, necrosis may occur. If this does, please visit the nearest hospital.";
+				//id will allow this to be called in the "yes" page.
+		} else if (bite_Count == blackSpider){
+			 biteid = "Black Widow Spider"; 
+			 img = '<img src = "https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/bad_bugs_slideshow/flickr_photo_of_black_window_bite.jpg?resize=646px:*&output-quality=100" >';
+			 disease = "no known diseases!";
+		} else if (bite_Count == fireAnts){
+			 biteid = "Fire Ants";
+			 img = '<img src = "https://cdn.ymaws.com/www.aocd.org/resource/resmgr/ddb_high/fire_ant_bite_1_high.jpg">';
+			 disease = "Haemolytic uremic syndrome";
+		} else if (bite_Count == deerFlies){
+			 biteid = "Deer Flies"; 
+			 img = '<img src = "https://edc2.healthtap.com/ht-staging/user_answer/avatars/2351502/large/open-uri20150712-8206-15ls90m.jpeg?1436669540">';
+			 disease = "Rabbit fever";
+		 //not sure if this picture is accurate
+		} else if (bite_Count == ticks){
+			 biteid = "Ticks";
+			 img = '<img src = "https://images.medicinenet.com/images/appictures/tick-bites-s6-disease-signs.jpg">';
+			 disease = "Lyme disease, Rocky Mountain Spotted Fever, ehrlichiosis, tularemia. <br> Please refer to:" + '<a href ="https://www.cdc.gov/ticks/diseases/index.html"> https://www.cdc.gov/ticks/diseases/index.html</a>';
+		} else if (bite_Count == bees){
+			 biteid = "Bees";
+			 img = '<img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxGdr49MrTVwR8NqyzzpLATj4m_ke-XfnAoCEYwaKRBLGM8nCHbg">';
+			 disease = "no known diseases!";
+		} else if (bite_Count == chiggers){
+			 biteid = "Chiggers";
+			 img = '<img src = "https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/bad_bugs_slideshow/280_190_photo_of_chigger_bites_on_leg.jpg">';
+			 disease = "no known diseases!";
+		} else if (bite_Count == mosquitoes){
+			 biteid = "Mosquitoes";
+			 img = '<img src = "https://images.agoramedia.com/everydayhealth/gcms/Why-Mosquito-Bites-Itch-and-How-to-Get-Relief-722x406.jpg">';
+			 disease = "Zika, West Nile Virus, Encephalitis, Malaria, Dengue, Chikungunya";
+		} else if (bite_Count == bedBugs){
+			 biteid = "Bedbugs";
+			 img = '<img src = "https://www.aad.org/Image%20Library/Main%20navigation/Public%20and%20patients/Diseases%20and%20treatments/Itchy%20skin/bed_bugs_landing.jpg">';
+			 disease = "no known diseases!";
+		} else if (bite_Count == fleas){
+			 biteid = "Fleas";
+			 img = '<img src = "https://cdn.orkin.com/images/bug-bites/flea_L.jpg" style="width:300px;height:300px;">';
+			 disease = "Murine typhus, mycoplasma haemofelis, Tapeworms, Cat Scratch Disease, and more.";
+		}
+		// display text results in the final result page. 
+		document.getElementById("fin_resultTxt").innerHTML = " The result of your bite is most likely " + biteid + " with a count score of " + bite_Count  ; 
+		document.getElementById("fin_resultImg").innerHTML = img; 
+		
+		// make the view result button disappear after result is displayed
+		document.getElementById("fin_result_button").style.display = "none"; 
 	}
 		
 	 
@@ -621,7 +672,7 @@
 			<!-- Name of the header at the top of the page -->
 		</div><!-- /header -->
 		<div role="main" class="ui-content">
-			<a onclick= "CalcResults();showResults();show_FinResult();" data-role="button" style= "display:block" id="fin_result_button"> Click here to view your results!</a>
+			<a onclick= "CalcResults();show_FinResult();" data-role="button" style= "display:block" id="fin_result_button"> Click here to view your results!</a>
 			<p id="fin_resultTxt"> </p> 
 			<p id="fin_resultImg"> </p>
 			<!-- calling the result image into the print function -->
