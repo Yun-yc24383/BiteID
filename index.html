@@ -236,7 +236,8 @@
 		 // display text results in the "yes" page. 
 		 document.getElementById("yes_result").innerHTML = " The result of your bite is most likely " + biteid + ".";
 		 document.getElementById("yes_result2").innerHTML = " Based on your results, there is a possibility that you might have these vector borne diseases: " + disease; 
-		
+		 document.getElementById("yes_resultImg").innerHTML = img; 
+		 
 		 // make yes/no buttons showup when after the result is viewed. 
 		 document.getElementById("yes_button").style.display = "block";
 		 document.getElementById("no_button").style.display = "block";
@@ -501,7 +502,7 @@
 			<p>Thank you for taking the survey.</p>
 			<p id="yes_result"> </p>
 			<p id="yes_result2"> </p>
-			<p id="resultImg"> </p>
+			<p id="yes_resultImg"> </p>
 			<!-- The text that is supposed to go after the text is up in the javascript functions -->
 			
 		</div><!-- /content -->
