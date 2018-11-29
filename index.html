@@ -372,7 +372,7 @@
 		<p> Click  START  to start the survey. 
 			<br> Disclaimer: If the scrollbar disappears, please refresh the page before continuing the survey. </p>  
 			<!-- content shown on title page, break is added by using <br> in each line-->
-		<a href="#Q1" data-role="button">START</a>	
+		<a href="#bitedes" data-role="button">START</a>	
 			<!-- Add a button that links to question 1 -->
 			<!-- on click, this will launch to the first page of the survey.-->
 		<img src = "https://i.ytimg.com/vi/r6uP2QWKjog/maxresdefault.jpg" alt="What bit me?">	
@@ -383,12 +383,34 @@
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
 	</div><!-- /intro page -->
-
+<!-- Description of an insect bite -->
+	<div data-role="page" id="bitedes">
+		<div data-role="header">
+			<h1>
+				<a href="#intro">Bug Bite ID</a>
+			</h1>
+			<!-- Name of the header at the top of the page -->
+		</div><!-- /header -->
+		<div data-role="content">
+			<p>Would you be able to describe the bite as a red bump?</p>
+			<!-- checkboxes-->
+			<ul><!--unordered bulleted list-->
+				<a href="#Q1" data-role="button">Yes</a>
+				<a href="#Q1" data-role="button">No</a>
+			</ul><!-- end of list-->
+			<a href="#Q1" data-role="button" style="float:right">Next</a> <!-- link to next page-->
+			<a href="#intro" data-role="button" style="float:left">Back</a> <!-- link to the previous page-->
+		</div><!-- /content -->
+		<div data-role="footer" data-position="fixed">
+			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
+			<h4>DIY Diagnostics</h4>
+		</div><!-- /footer -->
+	</div><!--/question 1--> 
 <!-- Question 1 of survey-->
 	<div data-role="page" id="Q1">
 		<div data-role="header">
 			<h1>
-				<a href="#intro">Bug Bite ID</a>
+				<a href="#bitedes">Bug Bite ID</a>
 			</h1>
 			<!-- Name of the header at the top of the page -->
 		</div><!-- /header -->
@@ -405,7 +427,7 @@
 				<label><input class="checkbox" type="checkbox" name="Neck[]" id="neck"> Neck </label>
 			</ul><!-- end of list-->
 			<a href="#Q2" data-role="button" style="float:right">Next</a> <!-- link to next page-->
-			<a href="#intro" data-role="button" style="float:left">Back</a> <!-- link to the previous page-->
+			<a href="#bitedes" data-role="button" style="float:left">Back</a> <!-- link to the previous page-->
 		</div><!-- /content -->
 		<div data-role="footer" data-position="fixed">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
