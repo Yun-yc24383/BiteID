@@ -386,7 +386,7 @@
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
 	</div><!-- /intro page -->
-<!-- Description of an insect bite -->
+<!-- Description of an insect bite (if red bump) -->
 	<div data-role="page" id="bitedes">
 		<div data-role="header">
 			<h1>
@@ -399,7 +399,7 @@
 			<!-- buttons-->
 			<ul><!--buttons-->
 				<a href="#hairfollicle" data-role="button">Yes</a>
-				<a href="#no1" data-role="button">No</a>
+				<a href="#no_redbump" data-role="button">No</a>
 			</ul><!-- end of buttons-->
 			<img src = "https://i.imgur.com/gS74SU7.jpg" alt= "Papular urticaria">
 			<a href="#intro" data-role="button" style="float:left">Back</a> <!-- link to the previous page-->
@@ -409,15 +409,20 @@
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
 	</div><!--/if the user clicks no to the previous page--> 
-<div data-role="page" id="no1">
+<!-- If not red bump--> 
+	<div data-role="page" id="no_redbump">
 		<div data-role="header">
 			<h1>
-				<a href="#bitedes">Bug Bite ID</a>
+				<a href="#intro">Bug Bite ID</a>
 			</h1>
 			<!-- Name of the header at the top of the page -->
 		</div><!-- /header -->
 		<div data-role="content">
-			<p>Sorry! <br> Based on the description that has been provided, it is likely that this is not a bite. <br> Please check to make sure that it is not an infection or skin condition.</p>
+			<p>
+				Sorry! 
+				<br> Based on the description that has been provided, it is likely that this is not a bite. 
+				<br> Please check with medical professions to make sure that it is not an infection or skin condition.
+			</p>
 			<a href="#bitedes" data-role="button" style="float:left">Back</a> <!-- link to the previous page-->
 		</div><!-- /content -->
 		<div data-role="footer" data-position="fixed">
@@ -425,7 +430,8 @@
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
 	</div><!--/bite description page--> 
-<div data-role="page" id="hairfollicle">
+<!-- Ask if all at hairfollicle--> 
+	<div data-role="page" id="hairfollicle">
 		<div data-role="header">
 			<h1>
 				<a href="#intro">Bug Bite ID</a>
@@ -433,19 +439,21 @@
 			<!-- Name of the header at the top of the page -->
 		</div><!-- /header -->
 		<div data-role="content">
-			<p>Are your bites centered over a hair follicle?</p>
+			<p>Does all your bites each centered over a hair follicle?</p>
 			<!-- buttons-->
 			<ul><!--buttons-->
-				<a href="#nothairfollicle" data-role="button">Yes</a>
+				<a href="#yes_hairfollicle" data-role="button">Yes</a>
 				<a href="#Q1" data-role="button">No</a>
 			</ul><!-- end of buttons-->
-			<a href="#bitedes" data-role="button" style="float:left">Back</a> <!-- link to the previous page-->
+			<a href="#redbump" data-role="button" style="float:left">Back</a> <!-- link to the previous page-->
 		</div><!-- /content -->
 		<div data-role="footer" data-position="fixed">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
-<div data-role="page" id="nothairfollicle">
+	</div><!--/bite description page--> 
+<!-- Bite centered hair follicle--> 	 
+	<div data-role="page" id="yes_hairfollicle">
 		<div data-role="header">
 			<h1>
 				<a href="#intro">Bug Bite ID</a>
@@ -453,7 +461,10 @@
 			<!-- Name of the header at the top of the page -->
 		</div><!-- /header -->
 		<div data-role="content">
-			<p>Sorry! <br> Based on the descriptions provided, it is likely that it is not a bite. <br> Please consult a dermatologist as this could be a skin infection. </p>
+			<p>
+				Sorry! 
+				<br> Based on the descriptions provided, it is likely that it is not a bite. 
+				<br> Please consult a dermatologist as this could be a skin infection. </p>
 			<!-- buttons-->
 			<a href="#hairfollicle" data-role="button" style="float:left">Back</a> <!-- link to the previous page-->
 		</div><!-- /content -->
@@ -461,6 +472,7 @@
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
+	</div><!--/bite description page--> 
 <!-- Question 1 of survey-->
 	<div data-role="page" id="Q1">
 		<div data-role="header">
