@@ -328,9 +328,6 @@
 	 label:hover img { display:block; }
 	.ui-page .ui-header {
 		background: #fbd0d1;}
-	.ui-page .ui-footer {
-		text-shadow: none ;
-		background: #cccccc;}
 		
 </style>   
  </head>
@@ -340,7 +337,7 @@
  <!-- Intro page -->
 	<div data-role="page" id="intro">
 		<!-- the layout of the website will be like a page. This page is labeled as intro so that the other pages can be differentiated from this one.-->
-		<div data-role="header" data-theme="d">
+		<div data-role="header">
 			<h1>Bug Bite ID</h1>
 				<!-- Name of the header at the top of the page -->
 		</div><!-- /header -->
@@ -382,7 +379,7 @@
 	</div><!-- /intro page -->
 <!-- Description of an insect bite (if red bump) -->
 	<div data-role="page" id="bitedes">
-		<div data-role="header" data-theme="d">
+		<div data-role="header" >
 			<h1>
 				<a href="#intro" style="color: #848484">Bug Bite ID</a>
 			</h1>
@@ -405,9 +402,9 @@
 	</div><!--/if the user clicks no to the previous page--> 
 <!-- If not red bump--> 
 	<div data-role="page" id="no_redbump">
-		<div data-role="header">
+		<div data-role="header" >
 			<h1>
-				<a href="#intro">Bug Bite ID</a>
+				<a href="#intro" >Bug Bite ID</a>
 			</h1>
 			<!-- Name of the header at the top of the page -->
 		</div><!-- /header -->
@@ -419,7 +416,7 @@
 			</p>
 			<a href="#bitedes" data-role="button" style="float:left">Back</a> <!-- link to the previous page-->
 		</div><!-- /content -->
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
@@ -442,7 +439,7 @@
 			<img src = "https://www.dermnetnz.org/assets/Uploads/acne/s/_resampled/FitWzQ4MCw0ODBd/WatermarkedWyIzNDcxOSJd/folliculitis5.jpg" alt="folliculitis">
 			<a href="#bitedes" data-role="button" style="float:left">Back</a> <!-- link to the previous page-->
 		</div><!-- /content -->
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
@@ -463,7 +460,7 @@
 			<!-- buttons-->
 			<a href="#hairfollicle" data-role="button" style="float:left">Back</a> <!-- link to the previous page-->
 		</div><!-- /content -->
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
@@ -485,7 +482,7 @@
 			</ul><!-- end of buttons-->
 			<a href="#hairfollicle" data-role="button" style="float:left">Back</a> <!-- link to the previous page-->
 		</div><!-- /content -->
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
@@ -506,7 +503,7 @@
 			<!-- buttons-->
 			<a href="#presence_time" data-role="button" style="float:left">Back</a> <!-- link to the previous page-->
 		</div><!-- /content -->
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
@@ -534,7 +531,7 @@
 			<a href="#Q2" data-role="button" style="float:right">Next</a> <!-- link to next page-->
 			<a href="#hairfollicle" data-role="button" style="float:left">Back</a> <!-- link to the previous page-->
 		</div><!-- /content -->
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
@@ -573,7 +570,7 @@
 			<a href="#Q3" data-role="button" style="float:right">Next</a> <!-- link to next page-->
 			<a href="#Q1" data-role="button" style="float:left">Back</a> <!-- link to the previous page-->
 		</div><!-- /content -->
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
@@ -598,7 +595,7 @@
 			<a href="#results" data-role="button" style="float:right">Next</a> <!-- link to next page-->
 			<a href="#Q2" data-role="button" style="float:left">Back</a> <!-- link to the previous page-->
 		</div><!-- /content -->
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
@@ -621,7 +618,7 @@
 			<a href="#no" data-role="button" id= "no_button" style = "display:none">No</a> 
 			
 		</div><!-- /content -->
-		<div data-role="footer">
+		<div data-role="footer" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
@@ -643,7 +640,7 @@
 			<!-- The text that is supposed to go after the text is up in the javascript functions -->
 			
 		</div><!-- /content -->
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
@@ -666,7 +663,7 @@
 			<a href="#img1" data-role="button" onclick = "bedBugsAdd()">Yes</a> 
 			<a href="#img1" data-role="button">No</a>
 		</div><!-- /content -->
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
@@ -687,7 +684,7 @@
 			<a href="#img2" data-role="button" onclick = "chiggersAdd()">Yes</a> 
 			<a href="#img2" data-role="button">No</a>
 		</div><!-- /content -->
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
@@ -708,7 +705,7 @@
 			<a href="#img3" data-role="button" onclick = "fleasAdd()">Yes</a> 
 			<a href="#img3" data-role="button">No</a>
 		</div><!-- /content -->
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
@@ -728,7 +725,7 @@
 			<a href="#img4" data-role="button" onclick = "mosquitoesAdd()">Yes</a> 
 			<a href="#img4" data-role="button">No</a>
 		</div><!-- /content -->
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
@@ -748,7 +745,7 @@
 			<a href="#img5" data-role="button" onclick = "ticksAdd()">Yes</a> 
 			<a href="#img5" data-role="button">No</a>	
 		</div><!-- /content -->
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
@@ -768,7 +765,7 @@
 			<a href="#img6" data-role="button" onclick = "fireAntsAdd()">Yes</a> 
 			<a href="#img6" data-role="button">No</a>		
 		</div><!-- /content -->
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
@@ -790,7 +787,7 @@
 			
 			
 		</div><!-- /content -->
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
@@ -812,7 +809,7 @@
 			
 			
 		</div><!-- /content -->
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
@@ -834,7 +831,7 @@
 			
 			
 		</div><!-- /content -->
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
@@ -859,7 +856,7 @@
 			<!-- calling the result image into the print function -->
 			<p> Thank you for using our survey! </p>
 		</div><!-- /content -->
-		<div data-role="footer">
+		<div data-role="footer" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
