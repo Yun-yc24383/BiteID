@@ -462,8 +462,8 @@
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
 	</div><!--/bump centered hair follicle page--> 
- <!-- Ask how long the bite has been present--> 
-	<div data-role="page" id="presence_time">
+ <!--  questions that can exclude the bump is a bite--> 
+	<div data-role="page" id="nonbitedes">
 		<div data-role="header" data-theme="d">
 			<h1>
 				<a href="#intro" style="color: #848484">Bug Bite ID</a>
@@ -471,10 +471,15 @@
 			<!-- Name of the header at the top of the page -->
 		</div><!-- /header -->
 		<div data-role="content">
-			<p>Have your bite(s) last for weeks?</p>
+			<p>
+				If any of the description below applies to your bite(s), please select yes. 
+				<br>  - Have they last for around or more than 2 weeks?
+				<br>  - Are they recurring? 
+				<br>  - Has it grown larger and larger in radius or spread?
+			</p>
 			<!-- buttons-->
 			<ul><!--buttons-->
-				<a href="#yes_weeks" data-role="button">Yes</a>
+				<a href="#yes_nonbitedes" data-role="button">Yes</a>
 				<a href="#Q1" data-role="button">No</a>
 			</ul><!-- end of buttons-->
 			<a href="#hairfollicle" data-role="button" style="float:left">Back</a> <!-- link to the previous page-->
@@ -484,8 +489,8 @@
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
 	</div><!--/bite description page-->
- <!-- bump lasts for weeks--> 	 
-	<div data-role="page" id="yes_weeks">
+ <!-- it's not an insect bite--> 	 
+	<div data-role="page" id="yes_nonbitedes">
 		<div data-role="header" data-theme="d">
 			<h1>
 				<a href="#intro" style="color: #848484">Bug Bite ID</a>
@@ -498,7 +503,7 @@
 				<br> Based on the descriptions provided, it is likely that the bump may require medical attention. 
 				<br> Please consult a dermatologist as this could be a skin infection. </p>
 			<!-- buttons-->
-			<a href="#presence_time" data-role="button" style="float:left">Back</a> <!-- link to the previous page-->
+			<a href="#nonbitedes" data-role="button" style="float:left">Back</a> <!-- link to the previous page-->
 		</div><!-- /content -->
 		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
