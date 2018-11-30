@@ -35,7 +35,6 @@
   <title>Bite ID</title>
   <meta name="viewport" content="width=device-width, initial-scale=.7">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <link rel="stylesheet" href="themes/pink.min.css" />
   <link rel="stylesheet" href="https://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
   <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
   <script src="https://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>-->
@@ -423,7 +422,7 @@
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
-	</div><!--/bite description page--> 
+	</div><!--/not red bump page--> 
 <!-- Ask if all at hairfollicle--> 
 	<div data-role="page" id="hairfollicle">
 		<div data-role="header">
@@ -433,11 +432,11 @@
 			<!-- Name of the header at the top of the page -->
 		</div><!-- /header -->
 		<div data-role="content">
-			<p>Does all your bites each centered over a hair follicle?</p>
+			<p>Does all your red bumps each centered over a hair follicle?</p>
 			<!-- buttons-->
 			<ul><!--buttons-->
 				<a href="#yes_hairfollicle" data-role="button">Yes</a>
-				<a href="#Q1" data-role="button">No</a>
+				<a href="#presence_time" data-role="button">No</a>
 			</ul><!-- end of buttons-->
 			<a href="#bitedes" data-role="button" style="float:left">Back</a> <!-- link to the previous page-->
 		</div><!-- /content -->
@@ -445,8 +444,8 @@
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
-	</div><!--/bite description page--> 
-<!-- Bite centered hair follicle--> 	 
+	</div><!--/hair follicle page--> 
+<!-- Bump centered hair follicle--> 	 
 	<div data-role="page" id="yes_hairfollicle">
 		<div data-role="header">
 			<h1>
@@ -466,7 +465,50 @@
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
-	</div><!--/bite description page--> 
+	</div><!--/bump centered hair follicle page--> 
+ <!-- Ask how long the bite has been present--> 
+	<div data-role="page" id="presence_time">
+		<div data-role="header">
+			<h1>
+				<a href="#intro">Bug Bite ID</a>
+			</h1>
+			<!-- Name of the header at the top of the page -->
+		</div><!-- /header -->
+		<div data-role="content">
+			<p>Have your bite(s) last for weeks?</p>
+			<!-- buttons-->
+			<ul><!--buttons-->
+				<a href="#yes_weeks" data-role="button">Yes</a>
+				<a href="#Q1" data-role="button">No</a>
+			</ul><!-- end of buttons-->
+			<a href="#hairfollicle" data-role="button" style="float:left">Back</a> <!-- link to the previous page-->
+		</div><!-- /content -->
+		<div data-role="footer" data-position="fixed">
+			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
+			<h4>DIY Diagnostics</h4>
+		</div><!-- /footer -->
+	</div><!--/bite description page-->
+ <!-- bump lasts for weeks--> 	 
+	<div data-role="page" id="yes_weeks">
+		<div data-role="header">
+			<h1>
+				<a href="#intro">Bug Bite ID</a>
+			</h1>
+			<!-- Name of the header at the top of the page -->
+		</div><!-- /header -->
+		<div data-role="content">
+			<p>
+				Sorry! 
+				<br> Based on the descriptions provided, it is likely that the bump may require medical attention. 
+				<br> Please consult a dermatologist as this could be a skin infection. </p>
+			<!-- buttons-->
+			<a href="#presence_time" data-role="button" style="float:left">Back</a> <!-- link to the previous page-->
+		</div><!-- /content -->
+		<div data-role="footer" data-position="fixed">
+			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
+			<h4>DIY Diagnostics</h4>
+		</div><!-- /footer -->
+	</div><!--/bump centered hair follicle page--> 
 <!-- Question 1 of survey-->
 	<div data-role="page" id="Q1">
 		<div data-role="header">
