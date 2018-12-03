@@ -319,59 +319,65 @@
     		width: 50%;
 		height: 45%
 	}
+	
+	/* set image of appearance page display when cursor is hover over the option. */
 	 label img { display:none; }
 	 label:hover img { display:block; }
-	.ui-page .ui-header {
-		background: #fbd0d1;}
-		
+	
+	/* set header color*/
+	.ui-page .ui-header {background: #fbd0d1;}		
 </style>   
- </head>
 
- <body>
-	  <input type='text' id="text1" onclick='javascript:toggleClass(this)' />
- <!-- Intro page -->
+</head>
+<body>
+	<input type='text' id="text1" onclick='javascript:toggleClass(this)' />
+<!-- Intro page -->
 	<div data-role="page" id="intro">
 		<!-- the layout of the website will be like a page. This page is labeled as intro so that the other pages can be differentiated from this one.-->
 		<div data-role="header" data-theme="d">
-			<h1>Bug Bite ID</h1>
-				<!-- Name of the header at the top of the page -->
+			<h1>Bug Bite ID</h1> <!-- Name of the header at the top of the page -->
 		</div><!-- /header -->
 		<div role="main" class="ui-content">
+			<!-- Introdce the app to the user of its purpose--> 
 			<p>
 				This website will help to determine which insect has bitten you.
 				<br>Please note that this website only determines an insect bite, not a rash/any other skin condition caused by an insect.
 			</p>
-	<!-- comment out the part that prompt the user to select and upload an image
+			<!-- comment out the part that prompt the user to select and upload an image, 
+			## this can be used if figure out how image analysis can aid in bite identification ##
 			<div>
 			Press "Choose File" to create or choose image file:
 			<input type="file" id="fileInput" STYLE="background-color: #FF6600;">
 			</div>
-		
-		<div id="messageDisplayArea"></div>
-		
-		<canvas id="myCanvas" width=600 height=500 paddle: 0 margin: auto style="border:1px solid #d3d3d3;" ></canvas>
-		<script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
-		var canvas = document.getElementById('myCanvas');// get canvas by id "myCanvas"
-		var context = canvas.getContext("2d");// set canvas element to 2D.
-		context.font = '20pt Calibri'; // set displayed text in canvas context to 20pt Calibri font
-		context.fillStyle = "black";// set displayed text in canvas context to black
-		context.fillText("Picture of your bite will be displayed here.", 10, 20); // state displayed text content and position. 
-		</script>
-	-->
-		<p> Click  START  to start the survey. 
-			<br> Disclaimer: If the scrollbar disappears, please refresh the page before continuing the survey. </p>  
-			<!-- content shown on title page, break is added by using <br> in each line-->
-		<a href="#bitedes" data-role="button">START</a>	
-			<!-- Add a button that links to question 1 -->
-			<!-- on click, this will launch to the first page of the survey.-->
-		<img src = "https://i.ytimg.com/vi/r6uP2QWKjog/maxresdefault.jpg" alt="What bit me?">	
+
+			<div id="messageDisplayArea"></div>
+
+			<canvas id="myCanvas" width=600 height=500 paddle: 0 margin: auto style="border:1px solid #d3d3d3;" ></canvas>
+			<script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
+			var canvas = document.getElementById('myCanvas');// get canvas by id "myCanvas"
+			var context = canvas.getContext("2d");// set canvas element to 2D.
+			context.font = '20pt Calibri'; // set displayed text in canvas context to 20pt Calibri font
+			context.fillStyle = "black";// set displayed text in canvas context to black
+			context.fillText("Picture of your bite will be displayed here.", 10, 20); // state displayed text content and position. 
+			</script>
+			-->
+			<p> 
+				Click  START  to start the survey. 
+				<br> Disclaimer: If the scrollbar disappears, please refresh the page before continuing the survey. 
+			</p>  <!-- content shown on title page, break is added by using <br> in each line-->
+
+			<a href="#bitedes" data-role="button">START</a>	
+				<!-- Add a button that links to question 1 -->
+				<!-- on click, this will launch to the first page of the survey.-->
+			<img src = "https://i.ytimg.com/vi/r6uP2QWKjog/maxresdefault.jpg" alt="What bit me?"> <!-- intro page image--> 
 		</div><!-- /content -->
 		
-		<div data-role="footer" data-position="fixed" data-theme="d">
+		<div data-role="footer" data-position="fixed" data-theme="d"> <!-- footer--> 
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
-			<h4>DIY Diagnostics</h4>
+			<h4>DIY Diagnostics</h4> <!--stream name--> 
 		</div><!-- /footer -->
 	</div><!-- /intro page -->
+	
 <!-- Description of an insect bite (if red bump) -->
 	<div data-role="page" id="bitedes">
 		<div data-role="header" data-theme="d">
@@ -381,20 +387,27 @@
 			<!-- Name of the header at the top of the page -->
 		</div><!-- /header -->
 		<div data-role="content">
-			<p>Would you be able to describe the bite as a red bump?</p>
+			<!-- Question for the page--> 
+			<p>Would you be able to describe the bite(s) as a red bump(s)?</p> 
+			
 			<!-- buttons-->
 			<ul><!--buttons-->
-				<a href="#hairfollicle" data-role="button">Yes</a>
-				<a href="#no_redbump" data-role="button">No</a>
+				<a href="#hairfollicle" data-role="button">Yes</a> <!-- yes button, link to next question-->
+				<a href="#no_redbump" data-role="button">No</a> <!-- no button, link to "If not red bump" page--> 
 			</ul><!-- end of buttons-->
+			
+			<!-- image of representation of red bumps-->
 			<img src = "https://i.imgur.com/gS74SU7.jpg" alt= "Papular urticaria">
-			<a href="#intro" data-role="button" style="float:left">Back</a> <!-- link to the previous page-->
+			
+			<!-- back button that links to the previous page-->
+			<a href="#intro" data-role="button" style="float:left">Back</a> 
 		</div><!-- /content -->
-		<div data-role="footer" data-position="fixed" data-theme="d">
+		<div data-role="footer" data-position="fixed" data-theme="d"> <!-- footer-->
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
-	</div><!--/if the user clicks no to the previous page--> 
+	</div><!--/insect bite description page--> 
+	
 <!-- If not red bump--> 
 	<div data-role="page" id="no_redbump">
 		<div data-role="header" data-theme="d">
@@ -404,18 +417,20 @@
 			<!-- Name of the header at the top of the page -->
 		</div><!-- /header -->
 		<div data-role="content">
-			<p>
+			<p> <!-- display text to tell user that iit is not an insect bite and this app will not be helpful. --> 
 				Sorry! 
 				<br> Based on the description that has been provided, it is likely that this is not a bite. 
 				<br> Please check with medical professions to make sure that it is not an infection or skin condition.
 			</p>
-			<a href="#bitedes" data-role="button" style="float:left">Back</a> <!-- link to the previous page-->
+			<!-- back button that links to the previous page-->
+			<a href="#bitedes" data-role="button" style="float:left">Back</a> 
 		</div><!-- /content -->
-		<div data-role="footer" data-position="fixed" data-theme="d">
+		<div data-role="footer" data-position="fixed" data-theme="d"><!-- footer-->
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
 	</div><!--/not red bump page--> 
+	
 <!-- Ask if all at hairfollicle--> 
 	<div data-role="page" id="hairfollicle">
 		<div data-role="header" data-theme="d">
@@ -425,20 +440,24 @@
 			<!-- Name of the header at the top of the page -->
 		</div><!-- /header -->
 		<div data-role="content">
+			<!-- Question asked on this page.--> 
 			<p>Does all your red bumps each centered over a hair follicle?</p>
 			<!-- buttons-->
 			<ul><!--buttons-->
-				<a href="#yes_hairfollicle" data-role="button">Yes</a>
-				<a href="#nonbitedes" data-role="button">No</a>
+				<a href="#yes_hairfollicle" data-role="button">Yes</a> <!-- yes button, links to next question.--> 
+				<a href="#nonbitedes" data-role="button">No</a><!-- no button, links to "Bump centered hair follicle" page.-->
 			</ul><!-- end of buttons-->
+			<!-- image representation of folliculitis-->
 			<img src = "https://i.imgur.com/FUCHlNy.jpg" alt="folliculitis">
-			<a href="#bitedes" data-role="button" style="float:left">Back</a> <!-- link to the previous page-->
+			<!-- back button that links to the previous page-->
+			<a href="#bitedes" data-role="button" style="float:left">Back</a> 
 		</div><!-- /content -->
-		<div data-role="footer" data-position="fixed" data-theme="d">
+		<div data-role="footer" data-position="fixed" data-theme="d"><!-- footer-->
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
 	</div><!--/hair follicle page--> 
+	
 <!-- Bump centered hair follicle--> 	 
 	<div data-role="page" id="yes_hairfollicle">
 		<div data-role="header" data-theme="d">
@@ -448,19 +467,20 @@
 			<!-- Name of the header at the top of the page -->
 		</div><!-- /header -->
 		<div data-role="content">
-			<p>
+			<p> <!-- display text to tell user it is not an insect bite and this app will not be helpful. --> 
 				Sorry! 
 				<br> Based on the descriptions provided, it is likely that it is not a bite. 
 				<br> Please consult a dermatologist as this could be a skin infection. </p>
-			<!-- buttons-->
-			<a href="#hairfollicle" data-role="button" style="float:left">Back</a> <!-- link to the previous page-->
+			<!-- back button that links to the previous page-->
+			<a href="#hairfollicle" data-role="button" style="float:left">Back</a> 
 		</div><!-- /content -->
 		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
 	</div><!--/bump centered hair follicle page--> 
- <!--  questions that can exclude the bump is a bite--> 
+	
+ <!-- Bite requires medical attention--> 
 	<div data-role="page" id="nonbitedes">
 		<div data-role="header" data-theme="d">
 			<h1>
@@ -469,7 +489,7 @@
 			<!-- Name of the header at the top of the page -->
 		</div><!-- /header -->
 		<div data-role="content">
-			<p>
+			<p><!-- conditions, if applied, the bite need medical attention. -->
 				If any of the description below applies to your bite(s), please select yes. 
 				<br><br>  - Have they last for around or more than 2 weeks?
 				<br><br>  - Are they recurring? 
@@ -480,14 +500,16 @@
 				<a href="#yes_nonbitedes" data-role="button">Yes</a>
 				<a href="#Q1" data-role="button">No</a>
 			</ul><!-- end of buttons-->
-			<a href="#hairfollicle" data-role="button" style="float:left">Back</a> <!-- link to the previous page-->
+			<!-- back button that links to the previous page-->
+			<a href="#hairfollicle" data-role="button" style="float:left">Back</a>
 		</div><!-- /content -->
 		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
-	</div><!--/bite description page-->
- <!-- it's not an insect bite--> 	 
+	</div><!--/bite req medical attention  page-->
+	
+ <!-- req medical attention--> 	 
 	<div data-role="page" id="yes_nonbitedes">
 		<div data-role="header" data-theme="d">
 			<h1>
@@ -496,7 +518,7 @@
 			<!-- Name of the header at the top of the page -->
 		</div><!-- /header -->
 		<div data-role="content">
-			<p>
+			<p><!-- display text tells user the bite need medical attention and this app may not be helpful. 
 				Sorry! 
 				<br> Based on the descriptions provided, it is likely that the bump may require medical attention. 
 				<br> Please consult a dermatologist as this could be a skin infection. </p>
@@ -508,7 +530,8 @@
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
 	</div><!--/bump centered hair follicle page--> 
-<!-- Question 1 of survey-->
+	
+<!-- Question 1 of survey - Location -->
 	<div data-role="page" id="Q1">
 		<div data-role="header" data-theme="d">
 			<h1>
@@ -519,7 +542,7 @@
 		<div data-role="content">
 			<p>Where is the bite located on your body? <br> Please select the location of your bite.</p>
 			<!-- checkboxes-->
-			<ul><!--unordered bulleted list-->
+			<ul><!--unordered bulleted list of bite locations-->
 				<label><input class="checkbox" type="checkbox" name="Leg[]" id="leg"> Legs/ankles </label>
 			    	<label><input class="checkbox" type="checkbox" name="Arm[]" id="arm"> Arms </label>
 			    	<label><input class="checkbox" type="checkbox" name="Folds[]" id="fold"> Folds of skin (e.g. inner elbow, behind your knee)</label>
@@ -536,7 +559,8 @@
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
 	</div><!--/question 1--> 
-<!-- Question 2 of survey-->
+	
+<!-- Question 2 of survey - Appearances -->
 	<div data-role="page" id="Q2">
 		<div data-role="header" data-theme="d">
 			<h1>
@@ -547,7 +571,7 @@
 		<div data-role="content">
 			<p>What does your bite(s) look like? <br> Please select the appearances that apply to the bite(s) you have.</p>
 			<!-- checkboxes-->
-			<ul><!--unordered bulleted list-->
+			<ul><!--unordered bulleted list of bite appearances-->
 			    	<!-- <label><input class="checkbox" type="checkbox" name="check[]" id="bump"> Bump <img src = "https://images.agoramedia.com/everydayhealth/gcms/What-Bit-Me-Spot-These-Bug-Bites-10-RM-722x406.jpg" style="width:200px;height:100px;" alt="bump"></label>-->
 				<label><input class="checkbox" type="checkbox" name="check[]" id="red/mark"> Bite mark or single red spot </label>
 			    	<label><input class="checkbox" type="checkbox" name="check[]" id="cluster"> Clustered in group <img src = "https://cdn.securesyte.com/W4LwBp7yVA-881/images/blog/bed-bug-bites-on-skin.jpg" style="width:200px;height:100px;" alt="cluster"> </label>
@@ -575,7 +599,7 @@
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
 	</div><!--/question 2--> 
-<!-- Question 3 of survey-->
+<!-- Question 3 of survey - Symptoms -->
 	<div data-role="page" id="Q3">
 		<div data-role="header" data-theme="d">
 			<h1>
@@ -587,7 +611,7 @@
 			<p>What symptoms do you have? <br>Please select the symptoms associate to the bite(s) you have.
 			<br>If none correspond, then please press the next button.</p>
 			<!-- checkboxes-->
-			<ul><!--unordered bulleted list-->
+			<ul><!--unordered bulleted list of bite symptoms-->
 			    	<label><input class="checkbox" type="checkbox" name="check[]" id="itch"> Itch </label>
 			    	<label><input class="checkbox" type="checkbox" name="check[]" id="pain"> Pain </label>
 			    	<label><input class="checkbox" type="checkbox" name="check[]" id="burn"> Burning sensation</label>
@@ -601,7 +625,7 @@
 		</div><!-- /footer -->
 	</div><!--/question 3--> 
 
-<!--Results1-->
+<!--Initiatl Results-->
 	<div data-role="page" id="results" >
 		<div data-role="header" data-theme="d">
 			<h1>
@@ -610,19 +634,22 @@
 			<!-- Name of the header at the top of the page -->
 		</div><!-- /header -->
 		<div role="main" class="ui-content">
+			<!-- a button that, if clicked, will call the JavaScript functions to calculate and show the result. -->
 			<a onclick= "CalcResults();showResults();" data-role="button" style= "display:block" id="result_button"> Click here to view your results!</a>
-			<p id="resultText"> </p> 
+			<p id="resultText"> </p> <!-- where result is displayed-->
 			<p> Does the image present here look similar to the bite you have? </p> 
-			<p id="resultImg"> </p>
-			<a href="#yes" data-role="button" id = "yes_button" style = "display:none">Yes</a>
-			<a href="#no" data-role="button" id= "no_button" style = "display:none">No</a> 
+			<p id="resultImg"> </p> <!-- where the bite image is dispalyed-->
+			<!-- click if user's bite is similar to image, ensure the result is correct-->
+			<a href="#yes" data-role="button" id = "yes_button" style = "display:none">Yes</a> 
+			<!-- click if user's bite is not similar to image, lead to grid images for users to select to double check the result-->
+			<a href="#no+img1" data-role="button" id= "no_button" style = "display:none">No</a> 
 			
 		</div><!-- /content -->
 		<div data-role="footer" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
-	</div><!--/Results-->
+	</div><!--/Initial Results-->
 	 
 <!-- this page is for when the user clicks yes in the results -->
 	<div data-role="page" id="yes">
@@ -633,20 +660,21 @@
 			<!-- Name of the header at the top of the page -->
 		</div><!-- /header -->
 		<div data-role="content">
+			<!-- Thanks the user for taking the survey and display results again for user's reference along with associated diseases--> 
 			<p>Thank you for taking the survey.</p>
 			<p id="yes_result"> </p>
 			<p id="yes_result2"> </p>
 			<p id="yes_resultImg"> </p>
-			<!-- The text that is supposed to go after the text is up in the javascript functions -->
-			
 		</div><!-- /content -->
 		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
-	</div><!--/page for when user clicks yes--> 
+	</div><!--/page for when user clicks yes--> 	
+	
 <!-- this page is for when the user clicks no in the results -->
-	<div data-role="page" id="no">
+<!-- Grid image page 1--> 
+	<div data-role="page" id="no+img1">
 		<div data-role="header" data-theme="d">
 			<h1>
 				<a href="#intro" style="color: #848484">Bug Bite ID</a>
@@ -654,43 +682,23 @@
 			<!-- Name of the header at the top of the page -->
 		</div><!-- /header -->
 		<div data-role="content">
+			<!-- instruction for user on how to proceed the grid images page.--> 
 			<p> The app will now have you go over some bug bite images to aid in your identification result.</p>
 			<p>Please click "Yes" if there is an image on the page that best represents your bite.</p>
 			<p>Please click "No" if none of the images on the page represents your bite.</p>
 			<!-- Grid of images begins here -->
-			<img src="https://i.imgur.com/j7d0rk0.jpg" alt="Bedbug">
-			<!-- Image source and the label -->
-			<a href="#img1" data-role="button" onclick = "bedBugsAdd()">Yes</a> 
-			<a href="#img1" data-role="button">No</a>
+			<img src="https://i.imgur.com/j7d0rk0.jpg" alt="Bedbug"><!-- Image source and the label -->
+			<!--buttons-->
+			<a href="#img2" data-role="button" onclick = "bedBugsAdd()">Yes</a>	<!-- if yes clicked, add one to the matching bite and go to next page.-->
+			<a href="#img2" data-role="button">No</a>	<!-- if no clicked, go to next page.--> 
 		</div><!-- /content -->
 		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
-	</div><!--/page for when user clicks no--> 
+	</div><!--/page for when user clicks no; Grid image p2 --> 
 
-<!-- page 2 of grid images -->
-	<div data-role="page" id="img1">
-		<div data-role="header" data-theme="d">
-			<h1>
-				<a href="#intro" style="color: #848484">Bug Bite ID</a>
-			</h1>
-			<!-- Name of the header at the top of the page -->
-		</div><!-- /header -->
-		<div data-role="content">
-			<p>Please click "Yes" if there is an image that best represents your bite.</p>
-			<p>Please click "No" if none of the images on the page represents your bite.</p>
-			<img src="https://i.imgur.com/juLwA1a.jpg" alt="Chiggers">
-			<a href="#img2" data-role="button" onclick = "chiggersAdd()">Yes</a> 
-			<a href="#img2" data-role="button">No</a>
-		</div><!-- /content -->
-		<div data-role="footer" data-position="fixed" data-theme="d">
-			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
-			<h4>DIY Diagnostics</h4>
-		</div><!-- /footer -->
-	</div><!--/page 2 of grid images--> 
-
-<!-- page 2 of grid images -->
+<!-- Grid image p2 -->
 	<div data-role="page" id="img2">
 		<div data-role="header" data-theme="d">
 			<h1>
@@ -701,16 +709,17 @@
 		<div data-role="content">
 			<p>Please click "Yes" if there is an image that best represents your bite.</p>
 			<p>Please click "No" if none of the images on the page represents your bite.</p>
-			<img src="https://i.imgur.com/QVMW6j3.jpg" alt="Fleas">
-			<a href="#img3" data-role="button" onclick = "fleasAdd()">Yes</a> 
-			<a href="#img3" data-role="button">No</a>
+			<img src="https://i.imgur.com/juLwA1a.jpg" alt="Chiggers">
+			<a href="#img3" data-role="button" onclick = "chiggersAdd()">Yes</a>	<!-- if yes clicked, add one to the matching bite and go to next page.-->
+			<a href="#img3" data-role="button">No</a>	<!-- if no clicked, go to next page.--> 
 		</div><!-- /content -->
 		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
-	</div><!--/page 2 of grid images--> 
- <!-- page 3 of grid images -->
+	</div><!-- Grid image p2 -->
+
+<!-- Grid image p3 -->
 	<div data-role="page" id="img3">
 		<div data-role="header" data-theme="d">
 			<h1>
@@ -721,16 +730,17 @@
 		<div data-role="content">
 			<p>Please click "Yes" if there is an image that best represents your bite.</p>
 			<p>Please click "No" if none of the images on the page represents your bite.</p>
-			<img src="https://i.imgur.com/ms1CqfY.jpg" alt="Mosquitoes">
-			<a href="#img4" data-role="button" onclick = "mosquitoesAdd()">Yes</a> 
-			<a href="#img4" data-role="button">No</a>
+			<img src="https://i.imgur.com/QVMW6j3.jpg" alt="Fleas">
+			<a href="#img4" data-role="button" onclick = "fleasAdd()">Yes</a>	<!-- if yes clicked, add one to the matching bite and go to next page.--> 
+			<a href="#img4" data-role="button">No</a>	<!-- if no clicked, go to next page.--> 
 		</div><!-- /content -->
 		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
-	</div><!--/page 3 of grid images--> 
- <!-- page 4 of grid images -->
+	</div><<!-- Grid image p3 --> 
+	
+<!-- Grid image p4 -->
 	<div data-role="page" id="img4">
 		<div data-role="header" data-theme="d">
 			<h1>
@@ -741,16 +751,16 @@
 		<div data-role="content">
 			<p>Please click "Yes" if there is an image that best represents your bite.</p>
 			<p>Please click "No" if none of the images on the page represents your bite.</p>
-			<img src="https://i.imgur.com/Qtultyn.jpg" alt="Ticks">
-			<a href="#img5" data-role="button" onclick = "ticksAdd()">Yes</a> 
-			<a href="#img5" data-role="button">No</a>	
+			<img src="https://i.imgur.com/ms1CqfY.jpg" alt="Mosquitoes">
+			<a href="#img5" data-role="button" onclick = "mosquitoesAdd()">Yes</a>	<!-- if yes clicked, add one to the matching bite and go to next page.-->
+			<a href="#img5" data-role="button">No</a>	<!-- if no clicked, go to next page.--> 
 		</div><!-- /content -->
 		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
-	</div><!--/page 4 of grid images--> 
- <!-- page 5 of grid images -->
+	</div><!-- Grid image p4 -->
+<!-- Grid image p5 -->
 	<div data-role="page" id="img5">
 		<div data-role="header" data-theme="d">
 			<h1>
@@ -761,16 +771,16 @@
 		<div data-role="content">
 			<p>Please click "Yes" if there is an image that best represents your bite.</p>
 			<p>Please click "No" if none of the images on the page represents your bite.</p>
-			<img src="https://i.imgur.com/PMKjqC7.jpg" alt="FireAnts">
-			<a href="#img6" data-role="button" onclick = "fireAntsAdd()">Yes</a> 
-			<a href="#img6" data-role="button">No</a>		
+			<img src="https://i.imgur.com/Qtultyn.jpg" alt="Ticks">
+			<a href="#img6" data-role="button" onclick = "ticksAdd()">Yes</a>	<!-- if yes clicked, add one to the matching bite and go to next page.--> 
+			<a href="#img6" data-role="button">No</a>	<!-- if no clicked, go to next page.--> 	
 		</div><!-- /content -->
 		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
-	</div><!--/page 5 of grid images-->
-  <!-- page 6 of grid images -->
+	</div><!-- Grid image p5 --> 
+<!-- Grid image p6 -->
 	<div data-role="page" id="img6">
 		<div data-role="header" data-theme="d">
 			<h1>
@@ -781,18 +791,16 @@
 		<div data-role="content">
 			<p>Please click "Yes" if there is an image that best represents your bite.</p>
 			<p>Please click "No" if none of the images on the page represents your bite.</p>
-			<img src="https://i.imgur.com/tkBY3he.jpg" alt="bee">
-			<a href="#img7" data-role="button" onclick = "beesAdd()">Yes</a> 
-			<a href="#img7" data-role="button">No</a>
-			
-			
+			<img src="https://i.imgur.com/PMKjqC7.jpg" alt="FireAnts">
+			<a href="#img7" data-role="button" onclick = "fireAntsAdd()">Yes</a>	<!-- if yes clicked, add one to the matching bite and go to next page.--> 
+			<a href="#img7" data-role="button">No</a>	<!-- if no clicked, go to next page.--> 		
 		</div><!-- /content -->
 		<div data-role="footer" data-position="fixed" data-theme="d">
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
-	</div><!--/page 6 of grid images-->
-<!-- page 7 of grid images -->
+	</div><!-- Grid image p6 -->
+<!-- Grid image p7 -->
 	<div data-role="page" id="img7">
 		<div data-role="header" data-theme="d">
 			<h1>
@@ -803,9 +811,9 @@
 		<div data-role="content">
 			<p>Please click "Yes" if there is an image that best represents your bite.</p>
 			<p>Please click "No" if none of the images on the page represents your bite.</p>
-			<img src="https://i.imgur.com/5lcM0fw.jpg" alt="Black Widow Spider">
-			<a href="#img8" data-role="button" onclick = "blackSpiderAdd()">Yes</a> 
-			<a href="#img8" data-role="button">No</a>
+			<img src="https://i.imgur.com/tkBY3he.jpg" alt="bee">
+			<a href="#img8" data-role="button" onclick = "beesAdd()">Yes</a>	<!-- if yes clicked, add one to the matching bite and go to next page.--> 
+			<a href="#img8" data-role="button">No</a>	<!-- if no clicked, go to next page.--> 
 			
 			
 		</div><!-- /content -->
@@ -813,8 +821,8 @@
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
-	</div><!--/page 7 of grid images-->
-<!-- page 8 of grid images -->
+	</div><!-- Grid image p7 -->
+<!-- Grid image p8 -->
 	<div data-role="page" id="img8">
 		<div data-role="header" data-theme="d">
 			<h1>
@@ -825,9 +833,9 @@
 		<div data-role="content">
 			<p>Please click "Yes" if there is an image that best represents your bite.</p>
 			<p>Please click "No" if none of the images on the page represents your bite.</p>
-			<img src="https://i.imgur.com/LbaoiC8.jpg" alt="Brown Recluse Spider">
-			<a href="#fin_results" data-role="button" onclick = "brownSpiderAdd()">Yes</a> 
-			<a href="#fin_results" data-role="button">No</a>
+			<img src="https://i.imgur.com/5lcM0fw.jpg" alt="Black Widow Spider">
+			<a href="#img9" data-role="button" onclick = "blackSpiderAdd()">Yes</a>	<!-- if yes clicked, add one to the matching bite and go to next page.-->
+			<a href="#img9" data-role="button">No</a>	<!-- if no clicked, go to next page.--> 
 			
 			
 		</div><!-- /content -->
@@ -835,7 +843,27 @@
 			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
 			<h4>DIY Diagnostics</h4>
 		</div><!-- /footer -->
-	</div><!--/page 8 of grid images-->
+	</div><!-- Grid image p8 -->
+<!-- Grid image p9 -->
+	<div data-role="page" id="img9">
+		<div data-role="header" data-theme="d">
+			<h1>
+				<a href="#intro" style="color: #848484">Bug Bite ID</a>
+			</h1>
+			<!-- Name of the header at the top of the page -->
+		</div><!-- /header -->
+		<div data-role="content">
+			<p>Please click "Yes" if there is an image that best represents your bite.</p>
+			<p>Please click "No" if none of the images on the page represents your bite.</p>
+			<img src="https://i.imgur.com/LbaoiC8.jpg" alt="Brown Recluse Spider">
+			<a href="#fin_results" data-role="button" onclick = "brownSpiderAdd()">Yes</a>	<!-- if yes clicked, add one to the matching bite and go to final result page.--> 
+			<a href="#fin_results" data-role="button">No</a>	<!-- if no clicked, go to final result page.--> 
+		</div><!-- /content -->
+		<div data-role="footer" data-position="fixed" data-theme="d">
+			<p style="color:red;">Please note that this website does not store any information.</p><!-- privacy statement-->
+			<h4>DIY Diagnostics</h4>
+		</div><!-- /footer -->
+	</div><!-- Grid image p9 -->
 
  <!--Final Results-->
 	<div data-role="page" id="fin_results">
@@ -846,13 +874,16 @@
 			<!-- Name of the header at the top of the page -->
 		</div><!-- /header -->
 		<div role="main" class="ui-content">
+			<!-- button that, if clicked, call the functions that calculate and display the final result on page. -->
 			<a onclick= "CalcResults();show_FinResult();" data-role="button" style= "display:block" id="fin_result_button"> Click here to view your results!</a>
+			<!-- display bite result and possible associate diseases--> 
 			<p id="fin_resultTxt1"> </p> 
 			<p id="fin_resultTxt2"> </p>
 			<p id="fin_resultTxt3"> </p>
+			<!-- button that allows user to restart the survey--> 
 			<a href="#intro" data-role="button" style = "display:none" id = "restart" >Go back to the beginning</a>
+			<!-- display bite result image -->
 			<p id="fin_resultImg"> </p>
-			<!-- calling the result image into the print function -->
 			<p> Thank you for using our survey! </p>
 		</div><!-- /content -->
 		<div data-role="footer" data-theme="d">
@@ -863,3 +894,4 @@
 	<!-- this page is for when the user clicks yes in the results -->
 </body>
 </html>
+<!-- end of app--> 
