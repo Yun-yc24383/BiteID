@@ -47,7 +47,6 @@
 
 <script>
 	//All of these variables are set to 0 so that they will reset every time the app is launched.
-	var deerFlies = 0;
 	var ticks = 0;
 	var bees = 0;
 	var chiggers = 0;
@@ -60,9 +59,6 @@
 		
 	  
 	//These functions below will add a count to the total every time a corresponding button is pressed during the survey.
-	function deerFliesAdd(){
-		deerFlies = deerFlies + 1;
-	}
 	function brownSpiderAdd(){
 		brownSpider = brownSpider + 1;
 	}
@@ -94,7 +90,6 @@
 		blackSpider = blackSpider + 1;
 		brownSpider = brownSpider + 1;
 		fireAnts = fireAnts + 1;
-		deerFlies = deerFlies + 1;
 		ticks = ticks + 1;
 		bees = bees + 1;
 		chiggers = chiggers + 1;
@@ -158,10 +153,10 @@
 		}
 		// bite symptoms
 		if (document.getElementById("itch").checked == true){
-			  mosquitoesAdd();fireAntsAdd();chiggersAdd();bedBugsAdd();fleasAdd();brownSpiderAdd();deerFliesAdd();
+			  mosquitoesAdd();fireAntsAdd();chiggersAdd();bedBugsAdd();fleasAdd();brownSpiderAdd();
 		}
 		if (document.getElementById("pain").checked == true){
-			  brownSpiderAdd();deerFliesAdd();fireAntsAdd();beesAdd();blackSpiderAdd();ticksAdd();
+			  brownSpiderAdd();fireAntsAdd();beesAdd();blackSpiderAdd();ticksAdd();
 		}
 		if (document.getElementById("burn").checked == true){
 			  fireAntsAdd();beesAdd();
@@ -171,7 +166,7 @@
 	// This function shows the calculated results. 
 	// It has the if statements to call results, and an image that corresponds with it.
 	 function showResults() {
-		 var bite_Count = Math.max(deerFlies,brownSpider,ticks,bees,chiggers,mosquitoes,bedBugs,fleas)
+		 var bite_Count = Math.max(brownSpider,ticks,bees,chiggers,mosquitoes,bedBugs,fleas)
 		 // if a specific bite count equals to the maximum bite count found then that will be the output result
 		 var img = ''; // image variable that will be display on the result page. 
 		 if (bite_Count == brownSpider){
@@ -189,11 +184,6 @@
 			 biteid = "Fire Ants";
 			 img = '<img src = "https://cdn.ymaws.com/www.aocd.org/resource/resmgr/ddb_high/fire_ant_bite_1_high.jpg">';
 			 disease = "Haemolytic uremic syndrome";
-		 } else if (bite_Count == deerFlies){
-			 biteid = "Deer Flies"; 
-			 img = '<img src = "https://edc2.healthtap.com/ht-staging/user_answer/avatars/2351502/large/open-uri20150712-8206-15ls90m.jpeg?1436669540">';
-			 disease = "Rabbit fever";
-			 //not sure if this picture is accurate
 		 } else if (bite_Count == ticks){
 			 biteid = "Ticks";
 			 img = '<img src = "https://images.medicinenet.com/images/appictures/tick-bites-s6-disease-signs.jpg">';
@@ -241,7 +231,7 @@
 	
 	// This function shows the result in the final result page. 
 	function show_FinResult() {
-		var bite_Count = Math.max(deerFlies,brownSpider,ticks,bees,chiggers,mosquitoes,bedBugs,fleas)
+		var bite_Count = Math.max(brownSpider,ticks,bees,chiggers,mosquitoes,bedBugs,fleas)
 		 // if a specific bite count equals to the maximum bite count found then that will be the output result
 		var img = ''; // image variable that will be display on the result page. 
 		if (bite_Count == brownSpider){
@@ -259,11 +249,6 @@
 			 biteid = "Fire Ants";
 			 img = '<img src = "https://cdn.ymaws.com/www.aocd.org/resource/resmgr/ddb_high/fire_ant_bite_1_high.jpg">';
 			 disease = "Haemolytic uremic syndrome";
-		} else if (bite_Count == deerFlies){
-			 biteid = "Deer Flies"; 
-			 img = '<img src = "https://edc2.healthtap.com/ht-staging/user_answer/avatars/2351502/large/open-uri20150712-8206-15ls90m.jpeg?1436669540">';
-			 disease = "Rabbit fever";
-		 //not sure if this picture is accurate
 		} else if (bite_Count == ticks){
 			 biteid = "Ticks";
 			 img = '<img src = "https://images.medicinenet.com/images/appictures/tick-bites-s6-disease-signs.jpg">';
