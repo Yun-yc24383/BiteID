@@ -56,7 +56,18 @@
 	var fleas = 0;
 	var fireAnts = 0;
 	var blackSpider = 0;
-		
+	
+	function clearAll(){
+		var ticks = 0;
+		var bees = 0;
+		var chiggers = 0;
+		var brownSpider = 0;
+		var mosquitoes = 0;
+		var bedBugs = 0;
+		var fleas = 0;
+		var fireAnts = 0;
+		var blackSpider = 0;
+	}
 	  
 	//These functions below will add a count to the total every time a corresponding button is pressed during the survey.
 	function brownSpiderAdd(){
@@ -871,7 +882,7 @@
 		</div><!-- /header -->
 		<div role="main" class="ui-content">
 			<!-- button that, if clicked, call the functions that calculate and display the final result on page. -->
-			<a onclick= "CalcResults();show_FinResult();" data-role="button" style= "display:block" id="fin_result_button"> Click here to view your results!</a>
+			<a onclick= "clearAll();CalcResults();show_FinResult();" data-role="button" style= "display:block" id="fin_result_button"> Click here to view your results!</a>
 			<!-- display bite result and possible associate diseases--> 
 			<p id="fin_resultTxt1"> </p> 
 			<p id="fin_resultTxt2"> </p>
