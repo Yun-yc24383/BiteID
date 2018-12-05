@@ -126,7 +126,10 @@
 		}
 		// bite appearances
 		if (document.getElementById("red/mark").checked == true){
-			  ticksAdd(); bedBugsAdd(); beesAdd();fleasAdd();
+			  beesAdd();
+		}
+		if (document.getElementById("puff").checked == true){
+			  mosquitoesAdd();beesAdd();
 		}
 	  	if (document.getElementById("cluster").checked == true){
 			  bedBugsAdd();fleasAdd();chiggersAdd();
@@ -565,8 +568,8 @@
 			<p>What does your bite(s) look like? <br> Please select the appearances that apply to the bite(s) you have.</p>
 			<!-- checkboxes-->
 			<ul><!--unordered bulleted list of bite appearances-->
-			    	<!-- <label><input class="checkbox" type="checkbox" name="check[]" id="bump"> Bump <img src = "https://images.agoramedia.com/everydayhealth/gcms/What-Bit-Me-Spot-These-Bug-Bites-10-RM-722x406.jpg" style="width:200px;height:100px;" alt="bump"></label>-->
-				<label><input class="checkbox" type="checkbox" name="check[]" id="red/mark"> Bite mark or single red spot </label>
+				<label><input class="checkbox" type="checkbox" name="check[]" id="red/mark"> Single red mark/spot <img src = "https://i.imgur.com/6RbJZUI.jpg" style="width:200px;height:100px;" alt="bump"></label>
+				<label><input class="checkbox" type="checkbox" name="check[]" id="puff"> Round, puffy bump <img src = "https://images.agoramedia.com/everydayhealth/gcms/What-Bit-Me-Spot-These-Bug-Bites-10-RM-722x406.jpg" style="width:200px;height:100px;" alt="puff bump"></label>
 			    	<label><input class="checkbox" type="checkbox" name="check[]" id="cluster"> Clustered in group <img src = "https://cdn.securesyte.com/W4LwBp7yVA-881/images/blog/bed-bug-bites-on-skin.jpg" style="width:200px;height:100px;" alt="cluster"> </label>
 			    	<label><input class="checkbox" type="checkbox" name="check[]" id="line"> Form a line <img src = "https://www.bed-bugs-handbook.com/images/xbites-in-a-line.jpg.pagespeed.ic.ZmT91p91Kk.jpg" style="width:200px;height:100px;" alt="line"> </label>
 			    	<label><input class="checkbox" type="checkbox" name="check[]" id="stinger"> Stinger presented <img src = "https://www.homenaturalcures.com/wp-content/uploads/bee-sting-1.jpg" style="width:200px;height:100px;" alt="stinger"> </label>
